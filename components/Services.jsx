@@ -140,13 +140,13 @@ const Services = () => {
       <div className="h-48">
         <FallingText
           text={`Please click me to make TECH BITS fall`}
-          highlightWords={["click" , "TECH" , "BITS"]}
+
           trigger="click"
           backgroundColor="transparent"
           wireframes={false}
           gravity={0.56}
           fontSize="1rem"
-          // mouseConstraintStiffness={0.9}
+        // mouseConstraintStiffness={0.9}
         />
       </div>
 

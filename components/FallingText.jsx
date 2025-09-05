@@ -3,7 +3,7 @@ import Matter from 'matter-js';
 
 const FallingText = ({
   text = '',
-  highlightWords = [],
+    highlightWords=["click" , "TECH" , "BITS"],
   trigger = 'auto',
   backgroundColor = 'transparent',
   wireframes = false,
