@@ -54,11 +54,13 @@ const Testimonials = () => {
               transition={{ delay: index * 0.2, duration: 0.6 }}
               className="p-6 bg-white/10 backdrop-blur-lg rounded-2xl shadow-lg"
             >
-              <Image
+              {/* <Image
                 src={t.img}
                 alt={t.name}
                 className="w-16 h-16 rounded-full mx-auto mb-4"
-              />
+                width={100}
+                height={100}
+              /> */}
               <h3 className="text-lg font-semibold">{t.name}</h3>
               <p className="text-sm text-gray-400">{t.role}</p>
               <p className="mt-3 text-gray-200 text-sm">{t.feedback}</p>

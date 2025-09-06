@@ -51,9 +51,11 @@ const Portfolio = () => {
               <Image
                 src={project.img}
                 alt={project.title}
+                width={600}
+                height={400}
                 className="w-full h-60 object-cover"
               />
-              <div className="absolute inset-0 bg-black/50 backdrop-blur-sm opacity-0 hover:opacity-100 transition duration-300 flex flex-col justify-center items-center p-4">
+              <div className="absolute inset-0 bg-black/50 backdrop-blur-sm opacity-100 hover:opacity-100 transition duration-300 flex flex-col justify-center items-center p-4">
                 <h3 className="text-xl font-bold">{project.title}</h3>
                 <p className="text-gray-300 text-sm mt-2">{project.desc}</p>
               </div>
