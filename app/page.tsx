@@ -1,5 +1,5 @@
 "use client"
-import Lightning from "@/components/Lightning";
+import LightRays from "@/components/LightRays";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import Portfolio from "@/components/Portfolio";
@@ -22,9 +22,26 @@ export default function Home() {
 
   return (
     <main className="relative w-full bg-black">
+      
       {/* Hero Section with Lightning */}
-      <div className="relative h-screen">
-        <Lightning hue={hue} speed={1.2} intensity={1.4} size={1} />
+      <div className="relative abc h-screen">
+        <div className="absolute top-0 left-0 w-full h-full">
+
+      
+        {/* <Lightning hue={hue} speed={1.2} intensity={1.4} size={1} /> */}
+        <LightRays
+          raysOrigin="top-center"
+          raysColor="#00ffff"
+          raysSpeed={1}
+          lightSpread={2}
+          rayLength={3}
+          followMouse={true}
+          mouseInfluence={1}
+          noiseAmount={0.1}
+          distortion={0.05}
+          className="custom-rays absolute"
+        />
+          </div>
         <Hero />
       </div>
 
