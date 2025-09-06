@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import CircularText from './CircularText';
-import FallingText from './FallingText';
 const Hero = () => {
   return (
     <section className="relative flex items-center justify-center h-screen w-full overflow-hidden">

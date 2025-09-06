@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const projects = [
   {
@@ -34,7 +35,7 @@ const Portfolio = () => {
           Our <span className="text-blue-400">Work</span>
         </motion.h2>
         <p className="text-gray-300 max-w-2xl mx-auto mb-12">
-          Take a look at some of the projects we've delivered for our clients.
+          Take a look at some of the projects we have delivered for our clients.
         </p>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -47,7 +48,7 @@ const Portfolio = () => {
               transition={{ delay: index * 0.2, duration: 0.6 }}
               className="relative rounded-2xl overflow-hidden shadow-xl hover:scale-105 transition duration-300 cursor-pointer"
             >
-              <img
+              <Image
                 src={project.img}
                 alt={project.title}
                 className="w-full h-60 object-cover"

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -40,7 +41,7 @@ const Testimonials = () => {
           What Our <span className="text-blue-400">Clients Say</span>
         </motion.h2>
         <p className="text-gray-300 max-w-2xl mx-auto mb-12">
-          We value our clients' feedback and strive to deliver the best.
+          We value our clients feedback and strive to deliver the best.
         </p>
 
         <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-8">
@@ -53,7 +54,7 @@ const Testimonials = () => {
               transition={{ delay: index * 0.2, duration: 0.6 }}
               className="p-6 bg-white/10 backdrop-blur-lg rounded-2xl shadow-lg"
             >
-              <img
+              <Image
                 src={t.img}
                 alt={t.name}
                 className="w-16 h-16 rounded-full mx-auto mb-4"

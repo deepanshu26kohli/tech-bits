@@ -1,5 +1,4 @@
 "use client"
-import { useState, useEffect } from "react";
 import Lightning from "@/components/Lightning";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
@@ -8,7 +7,7 @@ import Testimonials from "@/components/Testimonials";
 import CTA from "@/components/CTA";
 
 export default function Home() {
-  const [hue, setHue] = useState(230); // initial hue
+  const hue = 230 // initial hue
 
   // useEffect(() => {
   //   const interval = setInterval(() => {
