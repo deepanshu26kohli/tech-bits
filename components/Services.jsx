@@ -139,7 +139,7 @@ const Services = () => {
     <section className="relative bg-black/80 text-white ">
       <div className="h-48">
         <FallingText
-          text={`Please click me to make TECH BITS fall`}
+          text={`Please click me to play with the falling text. LAUNCH YOUR PLATFORM`}
 
           trigger="click"
           backgroundColor="transparent"

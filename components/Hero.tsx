@@ -16,8 +16,8 @@ const Hero = () => {
           transition={{ duration: 0.7, ease: "easeOut" }}
           className="text-5xl md:text-6xl font-extrabold drop-shadow-lg"
         >
-          Empowering Businesses with{" "}
-          <span className="text-blue-400">Techbits</span>
+          Your Platform, Our Launchpad to {" "}
+          <span className="text-blue-400">Success.</span>
         </motion.h1>
 
         <motion.p
@@ -46,7 +46,7 @@ const Hero = () => {
        
         <CircularText
 
-          text="TECH*BITS*TECH*BITS*"
+          text="LAUNCH*YOUR*PLATFORM*"
           onHover="speedUp"
           spinDuration={20}
           className="custom-class mt-10"

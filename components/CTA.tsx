@@ -15,7 +15,7 @@ const CTA = () => {
         Ready to Build Something Amazing?
       </motion.h2>
       <p className="text-gray-200 max-w-2xl mx-auto mb-6">
-        Let’s collaborate and bring your ideas to life with techbits.
+        Let’s collaborate and take your idea from concept to launch — we make your platform a reality.
       </p>
       <motion.button
         initial={{ scale: 0.9 }}
