@@ -5,6 +5,7 @@ import Services from "@/components/Services";
 import Portfolio from "@/components/Portfolio";
 import Testimonials from "@/components/Testimonials";
 import CTA from "@/components/CTA";
+import Header from "@/components/Header";
 
 export default function Home() {
   const hue = 230 // initial hue
@@ -22,26 +23,26 @@ export default function Home() {
 
   return (
     <main className="relative w-full bg-black">
-      
+
       {/* Hero Section with Lightning */}
-      <div className="relative abc h-screen">
+      <div className="relative abc h-auto">
         <div className="absolute top-0 left-0 w-full h-full">
 
-      
-        {/* <Lightning hue={hue} speed={1.2} intensity={1.4} size={1} /> */}
-        <LightRays
-          raysOrigin="top-center"
-          raysColor="#00ffff"
-          raysSpeed={1}
-          lightSpread={2}
-          rayLength={3}
-          followMouse={true}
-          mouseInfluence={1}
-          noiseAmount={0.1}
-          distortion={0.05}
-          className="custom-rays absolute"
-        />
-          </div>
+
+          {/* <Lightning hue={hue} speed={1.2} intensity={1.4} size={1} /> */}
+          <LightRays
+            raysOrigin="top-center"
+            raysColor="#00ffff"
+            raysSpeed={1}
+            lightSpread={2}
+            rayLength={3}
+            followMouse={true}
+            mouseInfluence={1}
+            noiseAmount={0.1}
+            distortion={0.05}
+            className="custom-rays absolute"
+          />
+        </div>
         <Hero />
       </div>
 
