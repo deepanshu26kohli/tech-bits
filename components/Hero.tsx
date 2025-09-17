@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import CircularText from './CircularText';
 const Hero = () => {
   return (
-    <section className="relative flex items-center justify-center h-screen  w-full ">
+    <section className="relative flex items-center justify-center h-auto py-28   w-full ">
       {/* Glassmorphic Overlay */}
       <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
 

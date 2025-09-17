@@ -31,27 +31,21 @@ const Testimonials = () => {
   return (
     <section className="bg-black/90 text-white py-24">
       <div className="max-w-6xl mx-auto px-6 text-center">
-        <motion.h2
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+        <h2
+        
           className="text-4xl font-bold mb-4"
         >
           What Our <span className="text-blue-400">Clients Say</span>
-        </motion.h2>
+        </h2>
         <p className="text-gray-300 max-w-2xl mx-auto mb-12">
           We value our clients feedback and strive to deliver the best.
         </p>
 
         <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((t, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.2, duration: 0.6 }}
+            
               className="p-6 bg-white/10 backdrop-blur-lg rounded-2xl shadow-lg"
             >
               {/* <Image
@@ -64,7 +58,7 @@ const Testimonials = () => {
               <h3 className="text-lg font-semibold">{t.name}</h3>
               <p className="text-sm text-gray-400">{t.role}</p>
               <p className="mt-3 text-gray-200 text-sm">{t.feedback}</p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

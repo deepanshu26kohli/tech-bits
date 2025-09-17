@@ -150,16 +150,13 @@ const Services = () => {
         />
       </div>
 
-      <div className="max-w-6xl mx-auto px-6 mt-10 text-center">
-        <motion.h2
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+      <div className="max-w-6xl mx-auto p-6 mt-10 text-center">
+        <h2
+          
           className="text-4xl font-bold mb-4"
         >
           Our <span className="text-blue-400">Services</span>
-        </motion.h2>
+        </h2>
         <LogoLoop
           logos={techLogos}
           speed={120}
@@ -178,18 +175,14 @@ const Services = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.2, duration: 0.6 }}
+            <div
+            key={index}
               className="p-6 bg-white/10 backdrop-blur-lg rounded-2xl shadow-lg hover:scale-105 transition duration-300 cursor-pointer"
             >
               <div className="flex justify-center mb-4 text-blue-400">{service.icon}</div>
               <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
               <p className="text-gray-300 text-sm">{service.desc}</p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

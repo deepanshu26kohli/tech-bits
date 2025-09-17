@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
@@ -9,12 +10,12 @@ const navLinks = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
-  { name: "Portfolio", href: "/portfolio" },
   { name: "Contact", href: "/contact" },
 ];
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <motion.header
@@ -35,15 +36,22 @@ const Header = () => {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-8">
-          {navLinks.map((link, index) => (
-            <Link
-              key={index}
-              href={link.href}
-              className="text-gray-200 hover:text-blue-400 transition font-medium"
-            >
-              {link.name}
-            </Link>
-          ))}
+          {navLinks.map((link, index) => {
+            const isActive = pathname === link.href;
+            return (
+              <Link
+                key={index}
+                href={link.href}
+                className={`transition font-medium ${
+                  isActive
+                    ? "text-blue-400 border-b-2 border-blue-400"
+                    : "text-gray-200 hover:text-blue-400"
+                }`}
+              >
+                {link.name}
+              </Link>
+            );
+          })}
         </nav>
 
         {/* Mobile Menu Button */}
@@ -64,16 +72,23 @@ const Header = () => {
           className="md:hidden mt-2 mx-6 bg-white/10 backdrop-blur-xl border border-white/20
                      rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.3)] p-4 flex flex-col space-y-4"
         >
-          {navLinks.map((link, index) => (
-            <Link
-              key={index}
-              href={link.href}
-              onClick={() => setIsOpen(false)}
-              className="text-gray-200 hover:text-blue-400 transition font-medium"
-            >
-              {link.name}
-            </Link>
-          ))}
+          {navLinks.map((link, index) => {
+            const isActive = pathname === link.href;
+            return (
+              <Link
+                key={index}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className={`transition font-medium ${
+                  isActive
+                    ? "text-blue-400 border-b-2 border-blue-400"
+                    : "text-gray-200 hover:text-blue-400"
+                }`}
+              >
+                {link.name}
+              </Link>
+            );
+          })}
         </motion.nav>
       )}
     </motion.header>

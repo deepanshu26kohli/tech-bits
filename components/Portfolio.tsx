@@ -1,65 +1,52 @@
 "use client";
 
-import { motion } from "framer-motion";
-import Image from "next/image";
-
 const projects = [
   {
     title: "Econix Dashboard",
     desc: "Built a scalable finance dashboard with real-time analytics and Snowflake integration.",
-    img: "https://placehold.co/600x400",
   },
   {
     title: "Accountizer",
     desc: "An accounting SaaS platform built with React & Laravel for managing finances efficiently.",
-    img: "https://placehold.co/600x400",
   },
   {
     title: "Hydrogen Shopify App",
     desc: "Custom Hydrogen storefront with seamless authentication and optimized APIs.",
-    img: "https://placehold.co/600x400",
   },
+  
 ];
 
 const Portfolio = () => {
   return (
-    <section className="bg-gray-950 text-white py-24">
-      <div className="max-w-6xl mx-auto px-6 text-center">
-        <motion.h2
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="text-4xl font-bold mb-4"
-        >
+    <section className="bg-gradient-to-br from-gray-950 via-black to-gray-950 text-white py-24 relative overflow-hidden">
+      {/* Background glow effect */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.25),transparent_50%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(236,72,153,0.2),transparent_50%)]"></div>
+
+      <div className="relative max-w-6xl mx-auto px-6 text-center">
+        <h2 className="text-5xl font-extrabold mb-6">
           Our <span className="text-blue-400">Work</span>
-        </motion.h2>
-        <p className="text-gray-300 max-w-2xl mx-auto mb-12">
+        </h2>
+        <p className="text-gray-300 max-w-2xl mx-auto mb-16 text-lg">
           Take a look at some of the projects we have delivered for our clients.
         </p>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {projects.map((project, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.2, duration: 0.6 }}
-              className="relative rounded-2xl overflow-hidden shadow-xl hover:scale-105 transition duration-300 cursor-pointer"
+              className="relative group p-8 rounded-2xl shadow-xl border border-white/20 
+              bg-white/10 backdrop-blur-xl transition-transform 
+              hover:scale-105 hover:shadow-blue-500/30 cursor-pointer"
             >
-              <Image
-                src={project.img}
-                alt={project.title}
-                width={600}
-                height={400}
-                className="w-full h-60 object-cover"
-              />
-              <div className="absolute inset-0 bg-black/50 backdrop-blur-sm opacity-100 hover:opacity-100 transition duration-300 flex flex-col justify-center items-center p-4">
-                <h3 className="text-xl font-bold">{project.title}</h3>
-                <p className="text-gray-300 text-sm mt-2">{project.desc}</p>
-              </div>
-            </motion.div>
+              <h3 className="text-2xl font-bold">{project.title}</h3>
+              <p className="text-gray-300 text-sm mt-3 leading-relaxed">
+                {project.desc}
+              </p>
+
+              {/* Subtle gradient border glow */}
+              <div className="absolute inset-0 rounded-2xl border border-transparent group-hover:border-blue-400/40 transition-all"></div>
+            </div>
           ))}
         </div>
       </div>

@@ -40,15 +40,12 @@ const Services = () => {
   return (
     <section className="bg-gray-950 text-white py-24">
       <div className="max-w-6xl mx-auto px-6 text-center">
-        <motion.h2
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+        <h2
+         
           className="text-4xl font-bold mb-4"
         >
           Our <span className="text-blue-400">Services</span>
-        </motion.h2>
+        </h2>
         <p className="text-gray-300 max-w-3xl mx-auto mb-12">
           At <span className="text-blue-400 font-semibold">LaunchUrPlatform</span>, 
           we provide end-to-end digital services to help businesses transform, scale, and thrive in today’s tech-driven world.
@@ -56,12 +53,9 @@ const Services = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.2, duration: 0.6 }}
+            
               className="bg-gray-900 rounded-2xl shadow-lg p-6 text-left hover:scale-105 transition duration-300"
             >
               <div className="mb-4">{service.icon}</div>
@@ -69,7 +63,7 @@ const Services = () => {
                 {service.title}
               </h4>
               <p className="text-gray-300 text-sm">{service.desc}</p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

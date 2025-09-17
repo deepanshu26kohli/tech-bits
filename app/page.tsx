@@ -25,17 +25,14 @@ export default function Home() {
     <main className="relative w-full bg-black">
 
       {/* Hero Section with Lightning */}
-      <div className="relative abc h-auto">
-        <div className="absolute top-0 left-0 w-full h-full">
-
-
-          {/* <Lightning hue={hue} speed={1.2} intensity={1.4} size={1} /> */}
+      {/* <div className="relative  h-auto  bg-black "> */}
+        <div className="absolute top-0 left-0 w-full  h-full">
           <LightRays
             raysOrigin="top-center"
             raysColor="#00ffff"
             raysSpeed={1}
             lightSpread={2}
-            rayLength={3}
+            rayLength={30}
             followMouse={true}
             mouseInfluence={1}
             noiseAmount={0.1}
@@ -43,9 +40,9 @@ export default function Home() {
             className="custom-rays absolute"
           />
         </div>
-        <Hero />
-      </div>
-
+       
+      {/* </div> */}
+ <Hero />
       {/* Next Sections */}
       <Services />
       <Portfolio />

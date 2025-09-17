@@ -6,26 +6,20 @@ const Contact = () => {
   return (
     <section className="bg-gray-950 text-white py-24">
       <div className="max-w-6xl mx-auto px-6 text-center">
-        <motion.h2
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+        <h2
+          
           className="text-4xl font-bold mb-4"
         >
           Get in <span className="text-blue-400">Touch</span>
-        </motion.h2>
+        </h2>
         <p className="text-gray-300 max-w-2xl mx-auto mb-12">
           Have an idea or project in mind? Let’s talk and bring your vision to life.
           Our team is here to answer questions and craft solutions tailored to your business.
         </p>
 
         {/* Contact Form */}
-        <motion.form
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+        <form
+        
           className="bg-gray-900 rounded-2xl shadow-lg p-8 max-w-3xl mx-auto text-left"
         >
           <div className="grid sm:grid-cols-2 gap-6 mb-6">
@@ -56,14 +50,11 @@ const Contact = () => {
           >
             Send Message
           </button>
-        </motion.form>
+        </form>
 
         {/* Contact Info */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+        <div
+         
           className="mt-12"
         >
           <p className="text-gray-300">
@@ -72,7 +63,7 @@ const Contact = () => {
               hello@launchurplatform.com
             </span>
           </p>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
