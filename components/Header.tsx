@@ -69,8 +69,8 @@ const Header = () => {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
-          className="md:hidden mt-2 mx-6 bg-white/10 backdrop-blur-xl border border-white/20
-                     rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.3)] p-4 flex flex-col space-y-4"
+          className="md:hidden absolute top-full left-0 w-full bg-white/10 backdrop-blur-xl border border-white/20
+                     rounded-b-xl shadow-[0_8px_30px_rgb(0,0,0,0.3)] p-4 flex flex-col space-y-4"
         >
           {navLinks.map((link, index) => {
             const isActive = pathname === link.href;
