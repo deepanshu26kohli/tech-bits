@@ -44,7 +44,7 @@ const Header = () => {
                 href={link.href}
                 className={`transition font-medium ${
                   isActive
-                    ? "text-blue-400 border-b-2 border-blue-400"
+                    ? "text-blue-400 "
                     : "text-gray-200 hover:text-blue-400"
                 }`}
               >

@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Code2, Cloud, ShieldCheck, Smartphone, BarChart, Users } from "lucide-react";
 
 const services = [
@@ -38,12 +37,13 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="bg-gray-950 text-white py-24">
-      <div className="max-w-6xl mx-auto px-6 text-center">
-        <h2
-         
-          className="text-4xl font-bold mb-4"
-        >
+    <section className="relative bg-gradient-to-br from-gray-950 via-black to-gray-950 text-white py-24 overflow-hidden">
+      {/* Background subtle glows */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.15),transparent_60%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(236,72,153,0.15),transparent_60%)]"></div>
+
+      <div className="relative max-w-6xl mx-auto px-6 text-center">
+        <h2 className="text-4xl font-extrabold mb-4">
           Our <span className="text-blue-400">Services</span>
         </h2>
         <p className="text-gray-300 max-w-3xl mx-auto mb-12">
@@ -55,14 +55,18 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-            
-              className="bg-gray-900 rounded-2xl shadow-lg p-6 text-left hover:scale-105 transition duration-300"
+              className="relative rounded-2xl border border-white/10 bg-white/10 
+              backdrop-blur-xl shadow-xl p-6 text-left 
+              hover:border-blue-400/40 transition-colors duration-300"
             >
+              {/* Glow border effect */}
+              <div className="absolute inset-0 rounded-2xl border border-transparent hover:border-blue-500/30 pointer-events-none"></div>
+
               <div className="mb-4">{service.icon}</div>
               <h4 className="text-xl font-bold mb-3 text-blue-400">
                 {service.title}
               </h4>
-              <p className="text-gray-300 text-sm">{service.desc}</p>
+              <p className="text-gray-200 text-sm leading-relaxed">{service.desc}</p>
             </div>
           ))}
         </div>

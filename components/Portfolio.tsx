@@ -2,18 +2,20 @@
 
 const projects = [
   {
-    title: "Econix Dashboard",
-    desc: "Built a scalable finance dashboard with real-time analytics and Snowflake integration.",
+    title: "Meerani",
+    desc: "An ecommerce platform built with Odoo for a seamless online shopping experience.",
+    link: "https://clothingbrand1.odoo.com/",
   },
   {
-    title: "Accountizer",
-    desc: "An accounting SaaS platform built with React & Laravel for managing finances efficiently.",
+    title: "Abstract Galiyara",
+    desc: "Built an ecommerce platform for a dynamic and user-friendly online store.",
+    link: "https://www.abstractgaliyara.com/",
   },
   {
-    title: "Hydrogen Shopify App",
-    desc: "Custom Hydrogen storefront with seamless authentication and optimized APIs.",
+    title: "Food Delivery App",
+    desc: "Built a food delivery app for a convenient and hassle-free food delivery experience.",
+    link: "https://www.launchurplatform.com/",
   },
-  
 ];
 
 const Portfolio = () => {
@@ -37,15 +39,26 @@ const Portfolio = () => {
               key={index}
               className="relative group p-8 rounded-2xl shadow-xl border border-white/20 
               bg-white/10 backdrop-blur-xl transition-transform 
-              hover:scale-105 hover:shadow-blue-500/30 cursor-pointer"
+              hover:scale-105 hover:shadow-blue-500/30"
             >
               <h3 className="text-2xl font-bold">{project.title}</h3>
               <p className="text-gray-300 text-sm mt-3 leading-relaxed">
                 {project.desc}
               </p>
 
+              {/* View Project Button */}
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-6 px-5 py-2 rounded-lg bg-blue-500 text-white font-medium 
+                hover:bg-blue-600 transition-colors shadow-lg shadow-blue-500/20"
+              >
+                View Project
+              </a>
+
               {/* Subtle gradient border glow */}
-              <div className="absolute inset-0 rounded-2xl border border-transparent group-hover:border-blue-400/40 transition-all"></div>
+              <div className="absolute inset-0 rounded-2xl border border-transparent group-hover:border-blue-400/40 transition-all pointer-events-none"></div>
             </div>
           ))}
         </div>
