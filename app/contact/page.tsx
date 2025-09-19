@@ -15,7 +15,7 @@ const Contact = () => {
   const [success, setSuccess] = useState<string | null>(null);
 
   const validate = () => {
-    let newErrors: Record<string, string> = {};
+    const newErrors: Record<string, string> = {};
 
     if (!formData.name) newErrors.name = "Name is required.";
     if (!formData.email) {
