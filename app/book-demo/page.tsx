@@ -15,7 +15,7 @@ const BookDemo = () => {
       {/* Calendly Embed */}
       <div className="w-full max-w-4xl bg-gray-800 p-6 rounded-2xl shadow-lg">
         <iframe
-          src="https://calendly.com/your-agency/demo" // 🔗 replace with your Calendly link
+          src="https://calendly.com/launchurplatform-info" // 🔗 replace with your Calendly link
           width="100%"
           height="700"
           frameBorder="0"
