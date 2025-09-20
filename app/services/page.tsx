@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { JSX, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Code2,
@@ -14,7 +14,19 @@ import {
 } from "lucide-react";
 import { useRouter } from "next/navigation";
 
-const services = [
+// Define Service type
+type Service = {
+  icon: JSX.Element;
+  title: string;
+  desc: string;
+  details: {
+    intro: string;
+    features: string[];
+    technologies: string[];
+  };
+};
+
+const services: Service[] = [
   {
     icon: <Code2 className="w-10 h-10 text-blue-400" />,
     title: "Web & App Development",
@@ -114,7 +126,7 @@ const services = [
 ];
 
 const Services = () => {
-  const [activeService, setActiveService] = useState<any>(null);
+  const [activeService, setActiveService] = useState<Service | null>(null);
   const router = useRouter();
 
   return (
@@ -179,6 +191,7 @@ const Services = () => {
               exit={{ scale: 0.9, opacity: 0 }}
             >
               <button
+                type="button"
                 className="absolute top-4 right-4 text-gray-400 hover:text-white"
                 onClick={() => setActiveService(null)}
               >
@@ -193,26 +206,25 @@ const Services = () => {
 
               <h4 className="text-lg font-semibold text-white mb-2">Key Features</h4>
               <ul className="list-disc list-inside text-gray-300 mb-6">
-                {activeService.details.features.map((feature: string, idx: number) => (
+                {activeService.details.features.map((feature, idx) => (
                   <li key={idx}>{feature}</li>
                 ))}
               </ul>
 
               <h4 className="text-lg font-semibold text-white mb-2">Technologies</h4>
               <div className="flex flex-wrap gap-2 mb-6">
-                {activeService.details.technologies.map(
-                  (tech: string, idx: number) => (
-                    <span
-                      key={idx}
-                      className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm"
-                    >
-                      {tech}
-                    </span>
-                  )
-                )}
+                {activeService.details.technologies.map((tech, idx) => (
+                  <span
+                    key={idx}
+                    className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm"
+                  >
+                    {tech}
+                  </span>
+                ))}
               </div>
 
               <button
+                type="button"
                 className="mt-4 px-6 py-3 rounded-xl bg-blue-500 hover:bg-blue-600 transition font-semibold"
                 onClick={() => router.push("/contact")}
               >
