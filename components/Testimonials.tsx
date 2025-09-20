@@ -18,7 +18,7 @@ const testimonials = [
     link: "https://www.abstractgaliyara.com/",
   },
   {
-    name: "James Parker",
+    name: "Rohit Kumar",
     role: "Founder, FinTechPro",
     feedback:
       "Our SaaS platform wouldn’t have been possible without their expert developers. Top-notch service!",
@@ -57,7 +57,7 @@ const Testimonials = () => {
                   {t.name.charAt(0)}
                 </div>
                 <h3 className="text-lg font-semibold text-blue-300">{t.name}</h3>
-                <p className="text-sm text-gray-400">{t.role}</p>
+                {/* <p className="text-sm text-gray-400">{t.role}</p> */}
                 <p className="mt-3 text-gray-200 text-sm italic">“{t.feedback}”</p>
               </div>
             </a>
