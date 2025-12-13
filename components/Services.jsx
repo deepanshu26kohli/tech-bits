@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Code, Cloud, Lock, Cpu } from "lucide-react";
 import LogoLoop from "./LogoLoop";
 import FallingText from './FallingText';
@@ -114,22 +113,22 @@ const techLogos = [
 const services = [
   {
     title: "Web & Mobile Development",
-    desc: "Build fast, scalable, and stunning apps with techbits technologies.",
+    desc: "Build lightning-fast, responsive applications with React, Next.js, and TypeScript. From progressive web apps to native mobile solutions, we deliver exceptional user experiences with performance optimization at the core.",
     icon: <Code size={40} />,
   },
   {
     title: "Cloud & DevOps Solutions",
-    desc: "Seamless migration, automation, and deployment pipelines for scalability.",
+    desc: "Seamless cloud migration and deployment on AWS, Google Cloud, and Azure. We implement robust CI/CD pipelines, infrastructure automation, and real-time monitoring for unmatched scalability and reliability.",
     icon: <Cloud size={40} />,
   },
   {
     title: "AI & Automation",
-    desc: "Leverage AI-driven solutions to streamline processes and boost productivity.",
+    desc: "Harness the power of AI with machine learning, natural language processing, and intelligent automation. Streamline operations, boost productivity, and unlock data-driven insights with cutting-edge AI solutions.",
     icon: <Cpu size={40} />,
   },
   {
     title: "Cybersecurity Consulting",
-    desc: "Protect your business with robust security and compliance solutions.",
+    desc: "Comprehensive security audits, penetration testing, and compliance solutions. Protect your digital assets with enterprise-grade security frameworks, threat detection, and proactive vulnerability management.",
     icon: <Lock size={40} />,
   },
 ];
@@ -137,22 +136,10 @@ const services = [
 const Services = () => {
   return (
     <section className="relative bg-black/80 text-white ">
-      <div className="h-48">
-        <FallingText
-          text={`Please click me to play with the falling text. LAUNCH YOUR PLATFORM`}
-
-          trigger="click"
-          backgroundColor="transparent"
-          wireframes={false}
-          gravity={0.56}
-          fontSize="1rem"
-        // mouseConstraintStiffness={0.9}
-        />
-      </div>
 
       <div className="max-w-6xl mx-auto p-6 mt-10 text-center">
         <h2
-          
+
           className="text-4xl font-bold mb-4"
         >
           Our <span className="text-blue-400">Services</span>
@@ -170,13 +157,13 @@ const Services = () => {
           ariaLabel="Technology partners"
         />
         <p className="text-gray-300 mt-5 max-w-2xl mx-auto mb-12">
-          We provide world-class IT solutions tailored to help your business grow, innovate, and scale seamlessly.
+          We deliver world-class IT solutions powered by cutting-edge technologies. From ideation to deployment, we partner with you to build, innovate, and scale seamlessly — transforming challenges into competitive advantages.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <div
-            key={index}
+              key={index}
               className="p-6 bg-white/10 backdrop-blur-lg rounded-2xl shadow-lg hover:scale-105 transition duration-300 cursor-pointer"
             >
               <div className="flex justify-center mb-4 text-blue-400">{service.icon}</div>

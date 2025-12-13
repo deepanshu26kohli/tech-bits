@@ -2,19 +2,19 @@
 
 const projects = [
   {
-    title: "Meerani",
-    desc: "An ecommerce platform built with Odoo for a seamless online shopping experience.",
-    link: "https://clothingbrand1.odoo.com/",
-  },
-  {
     title: "Abstract Galiyara",
-    desc: "Built an ecommerce platform for a dynamic and user-friendly online store.",
+    desc: "A sophisticated e-commerce platform featuring advanced product filtering, seamless checkout, and intuitive admin dashboard. Built with modern tech stack for optimal performance and user experience.",
     link: "https://www.abstractgaliyara.com/",
   },
   {
-    title: "Food Delivery App",
-    desc: "Built a food delivery app for a convenient and hassle-free food delivery experience.",
-    link: "https://www.launchurplatform.com/",
+    title: "AKS Fitness - Premium Fitness Hub",
+    desc: "Modern fitness website with dynamic membership management, workout tracking, and trainer profiles. Features responsive design with smooth animations and engaging user interface built using React and Next.js.",
+    link: "https://aksfitness.vercel.app/",
+  },
+  {
+    title: "Arbuda Mobile - E-Commerce Excellence",
+    desc: "Full-featured e-commerce platform for mobile covers and accessories with WhatsApp integration, product catalog management, and streamlined shopping experience. Built with React and Ant Design for a premium user journey.",
+    link: "https://www.arbudamobile.com/",
   },
 ];
 
@@ -27,10 +27,10 @@ const Portfolio = () => {
 
       <div className="relative max-w-6xl mx-auto px-6 text-center">
         <h2 className="text-5xl font-extrabold mb-6">
-          Our <span className="text-blue-400">Work</span>
+          Featured <span className="text-blue-400">Projects</span>
         </h2>
         <p className="text-gray-300 max-w-2xl mx-auto mb-16 text-lg">
-          Take a look at some of the projects we have delivered for our clients.
+          Explore our portfolio of cutting-edge digital solutions — from dynamic e-commerce platforms to innovative fitness hubs. Each project showcases our commitment to excellence, creativity, and delivering measurable results for our clients.
         </p>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -38,21 +38,23 @@ const Portfolio = () => {
             <div
               key={index}
               className="relative group p-8 rounded-2xl shadow-xl border border-white/20 
-              bg-white/10 backdrop-blur-xl transition-transform 
-              hover:scale-105 hover:shadow-blue-500/30"
+  bg-white/10 backdrop-blur-xl transition-transform 
+  hover:scale-105 hover:shadow-blue-500/30
+  flex flex-col h-[400px]"
             >
               <h3 className="text-2xl font-bold">{project.title}</h3>
+
               <p className="text-gray-300 text-sm mt-3 leading-relaxed">
                 {project.desc}
               </p>
 
-              {/* View Project Button */}
+              {/* View Project Button - Fixed at bottom */}
               <a
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block mt-6 px-5 py-2 rounded-lg bg-blue-500 text-white font-medium 
-                hover:bg-blue-600 transition-colors shadow-lg shadow-blue-500/20"
+                className="inline-block mt-auto px-5 py-2 rounded-lg bg-blue-500 text-white font-medium 
+    hover:bg-blue-600 transition-colors shadow-lg shadow-blue-500/20"
               >
                 View Project
               </a>
@@ -60,6 +62,7 @@ const Portfolio = () => {
               {/* Subtle gradient border glow */}
               <div className="absolute inset-0 rounded-2xl border border-transparent group-hover:border-blue-400/40 transition-all pointer-events-none"></div>
             </div>
+
           ))}
         </div>
       </div>

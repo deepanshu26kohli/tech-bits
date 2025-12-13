@@ -23,7 +23,7 @@ const values = [
   },
   {
     title: "Future-Ready",
-    desc: "We help you adopt next-gen technologies to stay competitive and prepare for tomorrow’s challenges today.",
+    desc: "We help you adopt next-gen technologies to stay competitive and prepare for tomorrow's challenges today.",
   },
 ];
 
@@ -36,34 +36,24 @@ const About = () => {
 
       <div className="relative max-w-6xl mx-auto px-6">
         {/* Header with Image + Text */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+        <div className=" gap-12 items-center mb-20">
           {/* Text */}
           <div>
             <h2 className="text-4xl font-extrabold mb-4">
               About <span className="text-blue-400">Us</span>
             </h2>
-            <p className="text-gray-300 max-w-2xl text-lg leading-relaxed">
-              At <span className="text-blue-400 font-semibold">LaunchUrPlatform</span>, 
-              we are passionate about transforming ideas into powerful digital solutions.  
-              From ambitious startups to forward-thinking enterprises, we empower businesses 
-              to leverage modern technology, accelerate growth, and create meaningful impact.
+            <p className="text-gray-300 text-lg leading-relaxed">
+              At <span className="text-blue-400 font-semibold">LaunchUrPlatform</span>,
+              we are a team of passionate technologists, designers, and innovators dedicated
+              to transforming ambitious ideas into powerful digital solutions. With years of
+              expertise across web development, cloud infrastructure, AI, and cybersecurity,
+              we empower startups and enterprises alike to leverage cutting-edge technology,
+              accelerate growth, and create lasting impact in the digital landscape.
             </p>
           </div>
 
           {/* Image */}
-          <div className="relative group w-full max-w-sm mx-auto">
-  {/* Portrait frame */}
-  <div className="relative rounded-3xl overflow-hidden border border-white/20 shadow-2xl bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-xl p-3">
-    <img
-      src="/about-img.png" // replace with your actual image
-      alt="About portrait"
-      className="rounded-2xl object-contain w-full h-[450px] transition-transform duration-500 group-hover:scale-105"
-    />
-  </div>
 
-  {/* Gradient glow */}
-  <div className="absolute -inset-6 bg-gradient-to-t from-blue-500/30 via-purple-500/20 to-pink-500/30 rounded-3xl blur-3xl opacity-70 group-hover:opacity-100 transition duration-500"></div>
-</div>
 
         </div>
 
@@ -71,10 +61,12 @@ const About = () => {
         <div className="relative bg-white/10 backdrop-blur-xl rounded-2xl border border-white/10 shadow-xl p-10 max-w-4xl mx-auto mb-20 text-center">
           <h3 className="text-2xl font-semibold text-blue-400 mb-4">Our Mission</h3>
           <p className="text-gray-200 text-lg leading-relaxed">
-            To empower businesses by delivering <span className="font-semibold text-white">scalable</span>, 
-            <span className="font-semibold text-white"> secure</span>, and 
-            <span className="font-semibold text-white"> user-focused</span> digital platforms 
-            that not only solve today’s challenges but also prepare you for tomorrow.
+            To empower businesses worldwide by delivering <span className="font-semibold text-white">innovative</span>,
+            <span className="font-semibold text-white"> scalable</span>, and
+            <span className="font-semibold text-white"> secure</span> digital platforms that drive
+            real business outcomes. We go beyond code — we build partnerships, solve complex challenges,
+            and equip our clients with technology that not only meets today's demands but anticipates
+            tomorrow's opportunities.
           </p>
         </div>
 

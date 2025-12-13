@@ -2,28 +2,28 @@
 
 const testimonials = [
   {
-    name: "Guneesh Kaur",
-    role: "CEO, Meerani",
+    name: "Akash Sharma",
+    role: "Owner, AKS Fitness",
     feedback:
-      "The team built an amazing ecommerce platform that exceeded our expectations. Highly satisfied!",
+      "The website transformed our fitness center! Member signups increased by 40% and our online booking system streamlined operations beautifully. The modern design perfectly captures our brand energy!",
     img: "https://placehold.co/600x400?text=Client",
-    link: "https://clothingbrand1.odoo.com/",
+    link: "https://aksfitness.vercel.app/",
   },
   {
-    name: "Abstract Galiyara",
-    role: "CTO, Abstract Galiyara",
+    name: "Abstract Galiyara Team",
+    role: "E-Commerce Manager",
     feedback:
-      "Their expertise and dedication to our project were outstanding. We couldn't have done it without them!",
+      "Our sales doubled within 3 months of launch! The intuitive product filtering and seamless checkout experience delighted our customers. Truly exceptional work that exceeded all expectations!",
     img: "https://placehold.co/600x400?text=Client",
     link: "https://www.abstractgaliyara.com/",
   },
   {
-    name: "Rohit Kumar",
-    role: "Founder, FinTechPro",
+    name: "Rohit Patel",
+    role: "Founder, Arbuda Mobile",
     feedback:
-      "Our SaaS platform wouldn’t have been possible without their expert developers. Top-notch service!",
+      "The e-commerce platform revolutionized our business! WhatsApp integration alone boosted customer engagement by 60%. Our conversion rates soared and the admin dashboard makes inventory management effortless!",
     img: "https://placehold.co/600x400?text=Client",
-    link: "https://www.launchurplatform.com/",
+    link: "https://www.arbudamobile.com/",
   },
 ];
 
@@ -35,7 +35,7 @@ const Testimonials = () => {
           What Our <span className="text-blue-400">Clients Say</span>
         </h2>
         <p className="text-gray-300 max-w-2xl mx-auto mb-12">
-          We value our clients feedback and strive to deliver the best.
+          Don't just take our word for it — hear from the businesses we've helped transform with innovative digital solutions and measurable results.
         </p>
 
         <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-8">
@@ -58,7 +58,7 @@ const Testimonials = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-blue-300">{t.name}</h3>
                 {/* <p className="text-sm text-gray-400">{t.role}</p> */}
-                <p className="mt-3 text-gray-200 text-sm italic">“{t.feedback}”</p>
+                <p className="mt-3 text-gray-200 text-sm italic">"{t.feedback}"</p>
               </div>
             </a>
           ))}

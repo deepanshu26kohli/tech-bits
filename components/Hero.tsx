@@ -18,8 +18,8 @@ const Hero = () => {
           transition={{ duration: 0.7, ease: "easeOut" }}
           className="text-5xl md:text-6xl font-extrabold drop-shadow-lg"
         >
-          Your Platform, Our Launchpad to{" "}
-          <span className="text-blue-400">Success.</span>
+          Transform Your Vision Into{" "}
+          <span className="text-blue-400">Digital Reality.</span>
         </motion.h1>
 
         <motion.p
@@ -28,8 +28,9 @@ const Hero = () => {
           transition={{ delay: 0.3, duration: 0.6 }}
           className="mt-6 text-lg md:text-xl max-w-2xl text-gray-200 drop-shadow-md"
         >
-          We help startups and enterprises build scalable, secure, and
-          innovative digital solutions tailored to their needs.
+          From innovative startups to established enterprises, we craft scalable,
+          secure, and cutting-edge digital solutions that accelerate growth and
+          drive measurable results. Let's build something extraordinary together.
         </motion.p>
 
         <motion.div
