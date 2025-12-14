@@ -52,6 +52,7 @@ const Contact = () => {
       }
     } catch (error) {
       setSuccess("❌ Something went wrong.");
+      console.error(error);
     } finally {
       setLoading(false);
     }

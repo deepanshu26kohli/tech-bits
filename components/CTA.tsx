@@ -28,8 +28,8 @@ const CTA = () => {
           </motion.h2>
 
           <p className="text-gray-200 max-w-2xl mx-auto mb-10 text-lg">
-            Join 50+ satisfied clients who've transformed their businesses with our cutting-edge solutions.
-            Let's collaborate to turn your vision into reality — from concept to launch, we're with you every step of the way.
+            Join 50+ satisfied clients who have transformed their businesses with our cutting-edge solutions.
+            Let us collaborate to turn your vision into reality — from concept to launch, we are with you every step of the way.
           </p>
 
           <motion.div

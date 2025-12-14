@@ -35,7 +35,7 @@ const Testimonials = () => {
           What Our <span className="text-blue-400">Clients Say</span>
         </h2>
         <p className="text-gray-300 max-w-2xl mx-auto mb-12">
-          Don't just take our word for it — hear from the businesses we've helped transform with innovative digital solutions and measurable results.
+          Do not just take our word for it — hear from the businesses we have helped transform with innovative digital solutions and measurable results.
         </p>
 
         <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-8">
@@ -58,7 +58,7 @@ const Testimonials = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-blue-300">{t.name}</h3>
                 {/* <p className="text-sm text-gray-400">{t.role}</p> */}
-                <p className="mt-3 text-gray-200 text-sm italic">"{t.feedback}"</p>
+                <p className="mt-3 text-gray-200 text-sm italic">{ '"' + t.feedback + '"'}</p>
               </div>
             </a>
           ))}

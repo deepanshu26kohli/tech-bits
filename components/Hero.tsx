@@ -30,7 +30,7 @@ const Hero = () => {
         >
           From innovative startups to established enterprises, we craft scalable,
           secure, and cutting-edge digital solutions that accelerate growth and
-          drive measurable results. Let's build something extraordinary together.
+          drive measurable results. Let us build something extraordinary together.
         </motion.p>
 
         <motion.div

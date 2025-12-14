@@ -65,8 +65,8 @@ const About = () => {
             <span className="font-semibold text-white"> scalable</span>, and
             <span className="font-semibold text-white"> secure</span> digital platforms that drive
             real business outcomes. We go beyond code — we build partnerships, solve complex challenges,
-            and equip our clients with technology that not only meets today's demands but anticipates
-            tomorrow's opportunities.
+            and equip our clients with technology that not only meets {"today's"} demands but anticipates
+            {"tomorrow's"} opportunities.
           </p>
         </div>
 
