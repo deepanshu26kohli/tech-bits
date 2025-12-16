@@ -2,7 +2,7 @@
 import LightRays from "@/components/LightRays";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
-import Portfolio from "@/components/Portfolio";
+import ClientJourney from "@/components/ClientJourney";
 import Testimonials from "@/components/Testimonials";
 import CTA from "@/components/CTA";
 import Header from "@/components/Header";
@@ -26,26 +26,26 @@ export default function Home() {
 
       {/* Hero Section with Lightning */}
       {/* <div className="relative  h-auto  bg-black "> */}
-        <div className="absolute top-0 left-0 w-full  h-full">
-          <LightRays
-            raysOrigin="top-center"
-            raysColor="#00ffff"
-            raysSpeed={1}
-            lightSpread={2}
-            rayLength={30}
-            followMouse={true}
-            mouseInfluence={1}
-            noiseAmount={0.1}
-            distortion={0.05}
-            className="custom-rays absolute"
-          />
-        </div>
-       
+      <div className="absolute top-0 left-0 w-full  h-full">
+        <LightRays
+          raysOrigin="top-center"
+          raysColor="#00ffff"
+          raysSpeed={1}
+          lightSpread={2}
+          rayLength={30}
+          followMouse={true}
+          mouseInfluence={1}
+          noiseAmount={0.1}
+          distortion={0.05}
+          className="custom-rays absolute"
+        />
+      </div>
+
       {/* </div> */}
- <Hero />
+      <Hero />
       {/* Next Sections */}
       <Services />
-      <Portfolio />
+      <ClientJourney />
       <Testimonials />
       <CTA />
     </main>

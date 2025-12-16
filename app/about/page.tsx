@@ -1,5 +1,7 @@
 "use client";
 
+import ClientJourney from "@/components/ClientJourney";
+
 const values = [
   {
     title: "Innovation",
@@ -68,6 +70,11 @@ const About = () => {
             and equip our clients with technology that not only meets {"today's"} demands but anticipates
             {"tomorrow's"} opportunities.
           </p>
+        </div>
+
+        {/* Client Journey Section */}
+        <div className="mb-24">
+          <ClientJourney />
         </div>
 
         {/* Core Values */}
