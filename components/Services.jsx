@@ -1,6 +1,6 @@
 "use client";
 
-import { Code, Cloud, Lock, Cpu } from "lucide-react";
+import { Code, Cloud, Lock, Cpu, Megaphone, TrendingUp, Brain } from "lucide-react";
 import LogoLoop from "./LogoLoop";
 import FallingText from './FallingText';
 import {
@@ -130,6 +130,21 @@ const services = [
     title: "Cybersecurity Consulting",
     desc: "Comprehensive security audits, penetration testing, and compliance solutions. Protect your digital assets with enterprise-grade security frameworks, threat detection, and proactive vulnerability management.",
     icon: <Lock size={40} />,
+  },
+  {
+    title: "Marketing & Branding",
+    desc: "Data-driven digital marketing strategies designed to maximize brand visibility and engagement. We leverage SEO, social media, and paid ad campaigns to put your brand in front of the right audience.",
+    icon: <Megaphone size={40} />,
+  },
+  {
+    title: "Sales Maximization",
+    desc: "Optimize conversion funnels and customer journeys to turn visitors into loyal customers. We analyze user behavior to implement strategies that dramatically boost your sales figures.",
+    icon: <TrendingUp size={40} />,
+  },
+  {
+    title: "RTO Prevention",
+    desc: "Deploy advanced AI prediction models to identify high-risk orders before they ship. Significantly reduce Return-to-Origin losses and increase overall profitability with our proprietary algorithms.",
+    icon: <Brain size={40} />,
   },
 ];
 

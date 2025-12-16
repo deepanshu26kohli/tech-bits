@@ -11,6 +11,9 @@ import {
   Users,
   ArrowRight,
   X,
+  Megaphone,
+  TrendingUp,
+  Brain,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
 
@@ -41,6 +44,54 @@ const services: Service[] = [
         "Cross-platform mobile apps",
       ],
       technologies: ["React", "Next.js", "Laravel", "Node.js", "TailwindCSS"],
+    },
+  },
+  {
+    icon: <Megaphone className="w-10 h-10 text-blue-400" />,
+    title: "Marketing & Branding",
+    desc: "Data-driven strategies to amplify your brand presence and drive real engagement.",
+    details: {
+      intro:
+        "We craft compelling marketing narratives and deploy targeted campaigns that resonate with your audience and drive growth.",
+      features: [
+        "SEO & Content Strategy",
+        "Social Media Management",
+        "PPC & Performance Marketing",
+        "Brand Identity Design",
+      ],
+      technologies: ["Google Ads", "Meta Ads", "Ahrefs", "Semrush", "Canva"],
+    },
+  },
+  {
+    icon: <TrendingUp className="w-10 h-10 text-blue-400" />,
+    title: "Sales Maximization",
+    desc: "Conversion rate optimization strategies that turn visitors into paying customers.",
+    details: {
+      intro:
+        "Your traffic means nothing if it doesn't convert. We optimize every touchpoint to maximize revenue per user.",
+      features: [
+        "Conversion Rate Optimization (CRO)",
+        "Sales Funnel Architecture",
+        "A/B Testing",
+        "Customer Retention Strategies",
+      ],
+      technologies: ["Google Optimize", "Hotjar", "HubSpot", "Salesforce", "ClickFunnels"],
+    },
+  },
+  {
+    icon: <Brain className="w-10 h-10 text-blue-400" />,
+    title: "RTO Prevention AI",
+    desc: "Proprietary AI models that predict and prevent Return-to-Origin losses for e-commerce.",
+    details: {
+      intro:
+        "Stop losing money on returns. Our AI analyzes hundreds of data points to flag risky orders before you ship them.",
+      features: [
+        "Real-time Risk Scoring",
+        "Address Validation",
+        "User Behavior Analysis",
+        "COD Verification Automation",
+      ],
+      technologies: ["Python", "TensorFlow", "Scikit-learn", "FastAPI", "Pandas"],
     },
   },
   {
@@ -123,6 +174,7 @@ const services: Service[] = [
       technologies: ["Agile", "Scrum", "Lean", "Jira", "Notion"],
     },
   },
+
 ];
 
 const Services = () => {
@@ -149,7 +201,7 @@ const Services = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          At <span className="text-blue-400 font-semibold">LaunchUrPlatform</span>, 
+          At <span className="text-blue-400 font-semibold">LaunchUrPlatform</span>,
           we provide end-to-end digital services to help businesses transform, scale, and thrive in today’s tech-driven world.
         </motion.p>
 
