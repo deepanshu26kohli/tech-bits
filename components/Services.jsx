@@ -117,21 +117,6 @@ const services = [
     icon: <Code size={40} />,
   },
   {
-    title: "Cloud & DevOps Solutions",
-    desc: "Seamless cloud migration and deployment on AWS, Google Cloud, and Azure. We implement robust CI/CD pipelines, infrastructure automation, and real-time monitoring for unmatched scalability and reliability.",
-    icon: <Cloud size={40} />,
-  },
-  {
-    title: "AI & Automation",
-    desc: "Harness the power of AI with machine learning, natural language processing, and intelligent automation. Streamline operations, boost productivity, and unlock data-driven insights with cutting-edge AI solutions.",
-    icon: <Cpu size={40} />,
-  },
-  {
-    title: "Cybersecurity Consulting",
-    desc: "Comprehensive security audits, penetration testing, and compliance solutions. Protect your digital assets with enterprise-grade security frameworks, threat detection, and proactive vulnerability management.",
-    icon: <Lock size={40} />,
-  },
-  {
     title: "Marketing & Branding",
     desc: "Data-driven digital marketing strategies designed to maximize brand visibility and engagement. We leverage SEO, social media, and paid ad campaigns to put your brand in front of the right audience.",
     icon: <Megaphone size={40} />,

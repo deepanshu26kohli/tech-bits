@@ -40,27 +40,22 @@ const Testimonials = () => {
 
         <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((t, index) => (
-            <a
+
+            <div
               key={index}
-              href={t.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group block"
-            >
-              <div
-                className="p-6 rounded-2xl shadow-lg border border-white/10 
+              className="p-6 rounded-2xl shadow-lg border border-white/10 
                            bg-white/10 backdrop-blur-lg 
                            group-hover:bg-blue-500/10 group-hover:border-blue-400/20 
                            transition-colors duration-300 cursor-pointer"
-              >
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-blue-400 to-indigo-600 flex items-center justify-center text-lg font-bold text-white shadow-md">
-                  {t.name.charAt(0)}
-                </div>
-                <h3 className="text-lg font-semibold text-blue-300">{t.name}</h3>
-                {/* <p className="text-sm text-gray-400">{t.role}</p> */}
-                <p className="mt-3 text-gray-200 text-sm italic">{ '"' + t.feedback + '"'}</p>
+            >
+              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-blue-400 to-indigo-600 flex items-center justify-center text-lg font-bold text-white shadow-md">
+                {t.name.charAt(0)}
               </div>
-            </a>
+              <h3 className="text-lg font-semibold text-blue-300">{t.name}</h3>
+              {/* <p className="text-sm text-gray-400">{t.role}</p> */}
+              <p className="mt-3 text-gray-200 text-sm italic">{'"' + t.feedback + '"'}</p>
+            </div>
+
           ))}
         </div>
       </div>
