@@ -5,10 +5,10 @@ import Services from "@/components/Services";
 import ClientJourney from "@/components/ClientJourney";
 import Testimonials from "@/components/Testimonials";
 import CTA from "@/components/CTA";
-import Header from "@/components/Header";
+
 
 export default function Home() {
-  const hue = 230 // initial hue
+
 
   // useEffect(() => {
   //   const interval = setInterval(() => {

@@ -135,7 +135,7 @@ const ClientJourney = () => {
                                             Start Your Journey <span className="text-blue-400">→</span>
                                         </h4>
                                         <p className="text-gray-300 leading-relaxed text-sm">
-                                            Ready to transform your business? connect with us today and let's build something extraordinary together.
+                                            Ready to transform your business? connect with us today and let us build something extraordinary together.
                                         </p>
                                     </div>
                                 </a>
