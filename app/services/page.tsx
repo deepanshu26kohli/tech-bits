@@ -59,7 +59,7 @@ const services: Service[] = [
         "PPC & Performance Marketing",
         "Brand Identity Design",
       ],
-      technologies: ["Google Ads", "Meta Ads", "Ahrefs", "Semrush", "Canva"],
+      technologies: ["Google Ads", "Meta Ads"],
     },
   },
   {
@@ -75,7 +75,7 @@ const services: Service[] = [
         "A/B Testing",
         "Customer Retention Strategies",
       ],
-      technologies: ["Google Optimize", "Hotjar", "HubSpot", "Salesforce", "ClickFunnels"],
+      technologies: ["Google Optimize", "ClickFunnels"],
     },
   },
   {

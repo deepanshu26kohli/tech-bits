@@ -3,7 +3,7 @@ import nodemailer from "nodemailer";
 
 export async function POST(req: Request) {
   try {
-    const { name, email, subject, message } = await req.json();
+    const { name, email, contactNumber, message } = await req.json();
 
     const transporter = nodemailer.createTransport({
       host: "smtp.hostinger.com",
@@ -17,12 +17,13 @@ export async function POST(req: Request) {
 
     await transporter.sendMail({
       from: `"${name}" <info@launchurplatform.com>`,
-      to:  "info@launchurplatform.com", // send to your own email
-      replyTo: email, // so you can reply directly to sender
-      subject: `[Website Contact] ${subject}`,
+      to: "info@launchurplatform.com", // send to your own email
+      replyTo: email || "info@launchurplatform.com", // fallback if no email provided
+      subject: `[Website Contact] New Inquiry from ${name}`,
       text: `
         Name: ${name}
-        Email: ${email}
+        Email: ${email || "Not Provided"}
+        Contact Number: ${contactNumber}
         Message: ${message}
       `,
     });

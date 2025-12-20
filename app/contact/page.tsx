@@ -7,7 +7,7 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    subject: "",
+    contactNumber: "",
     message: "",
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -17,14 +17,28 @@ const Contact = () => {
   const validate = () => {
     const newErrors: Record<string, string> = {};
 
-    if (!formData.name) newErrors.name = "Name is required.";
-    if (!formData.email) {
-      newErrors.email = "Email is required.";
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = "Enter a valid email.";
+    if (!formData.name.trim()) {
+      newErrors.name = "Name is required.";
+    } else if (formData.name.trim().length < 2) {
+      newErrors.name = "Name must be at least 2 characters.";
     }
-    if (!formData.subject) newErrors.subject = "Subject is required.";
-    if (!formData.message) newErrors.message = "Message is required.";
+
+    if (formData.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = "Enter a valid email address.";
+    }
+
+    const phoneRegex = /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/;
+    if (!formData.contactNumber.trim()) {
+      newErrors.contactNumber = "Contact number is required.";
+    } else if (!phoneRegex.test(formData.contactNumber.replace(/\s/g, ""))) {
+      newErrors.contactNumber = "Enter a valid contact number (10-15 digits).";
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = "Message is required.";
+    } else if (formData.message.trim().length < 10) {
+      newErrors.message = "Message must be at least 10 characters.";
+    }
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -46,7 +60,12 @@ const Contact = () => {
 
       if (res.ok) {
         setSuccess("✅ Message sent successfully!");
-        setFormData({ name: "", email: "", subject: "", message: "" });
+        setFormData({
+          name: "",
+          email: "",
+          contactNumber: "",
+          message: "",
+        });
       } else {
         setSuccess("❌ Failed to send. Try again later.");
       }
@@ -110,32 +129,34 @@ const Contact = () => {
 
             <div>
               <input
-                type="email"
-                placeholder="Your Email"
-                value={formData.email}
+                type="text"
+                placeholder="Contact Number"
+                value={formData.contactNumber}
                 onChange={(e) =>
-                  setFormData({ ...formData, email: e.target.value })
+                  setFormData({ ...formData, contactNumber: e.target.value })
                 }
                 className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
               />
-              {errors.email && (
-                <p className="text-red-400 text-sm mt-1">{errors.email}</p>
+              {errors.contactNumber && (
+                <p className="text-red-400 text-sm mt-1">
+                  {errors.contactNumber}
+                </p>
               )}
             </div>
           </div>
 
           <div>
             <input
-              type="text"
-              placeholder="Subject"
-              value={formData.subject}
+              type="email"
+              placeholder="Your Email (Optional)"
+              value={formData.email}
               onChange={(e) =>
-                setFormData({ ...formData, subject: e.target.value })
+                setFormData({ ...formData, email: e.target.value })
               }
-              className="w-full px-4 py-3 mb-2 rounded-lg bg-white/5 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+              className="w-full px-4 py-3 mb-6 rounded-lg bg-white/5 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
             />
-            {errors.subject && (
-              <p className="text-red-400 text-sm mb-4">{errors.subject}</p>
+            {errors.email && (
+              <p className="text-red-400 text-sm mb-4">{errors.email}</p>
             )}
           </div>
 

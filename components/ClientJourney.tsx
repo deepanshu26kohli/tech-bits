@@ -115,6 +115,32 @@ const ClientJourney = () => {
                             {/* Spacer Right */}
                             <div className="hidden md:block w-5/12 md:order-2"></div>
                         </div>
+
+                        {/* Step 5: Start Your Journey */}
+                        <div className="relative flex flex-col md:flex-row items-center md:justify-between group">
+                            {/* Node */}
+                            <div className="absolute left-0 md:left-1/2 w-16 h-16 bg-gray-950 border border-blue-500/30 rounded-full flex items-center justify-center z-10 group-hover:border-blue-400 transition-colors shadow-[0_0_15px_rgba(59,130,246,0.3)] md:transform md:-translate-x-1/2">
+                                <span className="text-blue-400 text-xl font-bold">5</span>
+                            </div>
+
+                            {/* Content Left (Empty for alternating on desktop) */}
+                            <div className="hidden md:block w-5/12"></div>
+
+                            {/* Content Right */}
+                            <div className="pl-24 md:pl-0 w-full md:w-5/12 text-left">
+                                <a href="/contact" className="block group cursor-pointer">
+                                    <div className="bg-blue-600/10 border border-blue-500/30 p-8 rounded-2xl hover:bg-blue-600/20 hover:border-blue-400 transition-all relative group-hover:scale-[1.02]">
+                                        <div className="absolute top-8 -left-4 w-4 h-0.5 bg-blue-500/30 md:hidden"></div>
+                                        <h4 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
+                                            Start Your Journey <span className="text-blue-400">→</span>
+                                        </h4>
+                                        <p className="text-gray-300 leading-relaxed text-sm">
+                                            Ready to transform your business? connect with us today and let's build something extraordinary together.
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
