@@ -1,9 +1,10 @@
+"use client";
 import { useRef, useState, useEffect } from 'react';
 import Matter from 'matter-js';
 
 const FallingText = ({
   text = '',
-    highlightWords=["click" , "LAUNCH" , "YOUR" , "PLATFORM"],
+  highlightWords = ["click", "LAUNCH", "YOUR", "PLATFORM"],
   trigger = 'auto',
   backgroundColor = 'transparent',
   wireframes = false,

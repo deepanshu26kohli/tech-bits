@@ -1,4 +1,4 @@
-"use client";
+
 
 import ClientJourney from "@/components/ClientJourney";
 import { TrendingUp, Truck, Server, PackageCheck, Banknote, Undo2, Layers, CheckCircle } from "lucide-react";
@@ -34,6 +34,34 @@ const partners = [
   "COD-heavy D2C businesses",
   "Founders serious about fixing fundamentals",
 ];
+
+
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "About Us | LaunchUrPlatform",
+  description: "We work exclusively with D2C brands to fix growth blockers. Learn how we connect storefront, checkout, and logistics into one engine.",
+  openGraph: {
+    title: "About Us | LaunchUrPlatform",
+    description: "We work exclusively with D2C brands to fix growth blockers. Learn how we connect storefront, checkout, and logistics into one engine.",
+    type: "website",
+    url: "https://launchurplatform.com/about",
+    images: [
+      {
+        url: "/default-og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "About LaunchUrPlatform",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Us | LaunchUrPlatform",
+    description: "We work exclusively with D2C brands to fix growth blockers. Learn how we connect storefront, checkout, and logistics into one engine.",
+    images: ["/default-og-image.jpg"],
+  },
+};
 
 const About = () => {
   return (

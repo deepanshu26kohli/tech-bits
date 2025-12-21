@@ -2,7 +2,8 @@
 
 import { Code, Cloud, Lock, Cpu, Megaphone, TrendingUp, Brain } from "lucide-react";
 import LogoLoop from "./LogoLoop";
-import FallingText from './FallingText';
+import dynamic from 'next/dynamic';
+const FallingText = dynamic(() => import('./FallingText'), { ssr: false });
 import {
   SiReact,
   SiNextdotjs,

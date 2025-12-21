@@ -3,7 +3,8 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import Link from "next/link"; // ✅ import Link for routing
-import CircularText from "./CircularText";
+import dynamic from 'next/dynamic';
+const CircularText = dynamic(() => import("./CircularText"), { ssr: false });
 
 const images = [
   "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop", // Space/Network
