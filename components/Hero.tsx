@@ -45,9 +45,7 @@ const Hero = () => {
           transition={{ delay: 0.3, duration: 0.6 }}
           className="mt-6 text-lg md:text-xl max-w-2xl text-gray-200 drop-shadow-md"
         >
-          From innovative startups to established enterprises, we craft scalable,
-          secure, and cutting-edge digital solutions that accelerate growth and
-          drive measurable results. Let us build something extraordinary together.
+          We build high-performance websites, conversion systems, and RTO intelligence that protect margins and scale revenue.
         </motion.p>
 
         <motion.div

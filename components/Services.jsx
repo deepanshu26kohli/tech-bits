@@ -112,7 +112,7 @@ const techLogos = [
 ];
 const services = [
   {
-    title: "Web & Mobile Development",
+    title: "High-Conversion Apps & Websites",
     desc: "Build lightning-fast, responsive applications with React, Next.js, and TypeScript. From progressive web apps to native mobile solutions, we deliver exceptional user experiences with performance optimization at the core.",
     icon: <Code size={40} />,
   },
@@ -127,7 +127,7 @@ const services = [
     icon: <TrendingUp size={40} />,
   },
   {
-    title: "RTO Prevention",
+    title: "RTO Prediction & Logistics Intelligence",
     desc: "Deploy advanced AI prediction models to identify high-risk orders before they ship. Significantly reduce Return-to-Origin losses and increase overall profitability with our proprietary algorithms.",
     icon: <Brain size={40} />,
   },

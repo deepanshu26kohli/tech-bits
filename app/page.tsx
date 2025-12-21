@@ -2,6 +2,7 @@
 import LightRays from "@/components/LightRays";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
+import WhyChooseUs from "@/components/WhyChooseUs";
 import ClientJourney from "@/components/ClientJourney";
 import Testimonials from "@/components/Testimonials";
 import CTA from "@/components/CTA";
@@ -45,6 +46,7 @@ export default function Home() {
       <Hero />
       {/* Next Sections */}
       <Services />
+      <WhyChooseUs />
       <ClientJourney />
       <Testimonials />
       <CTA />
