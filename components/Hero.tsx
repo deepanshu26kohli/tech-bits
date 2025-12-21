@@ -25,24 +25,7 @@ const Hero = () => {
   return (
     <section className="relative flex items-center justify-center min-h-[90vh] py-28 w-full overflow-hidden">
       {/* Background Carousel */}
-      <div className="absolute inset-0 z-0">
-        <AnimatePresence mode="popLayout">
-          <motion.img
-            key={currentImage}
-            src={images[currentImage]}
-            alt="Hero Background"
-            initial={{ opacity: 0, scale: 1.1 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1.5 }}
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-        </AnimatePresence>
-        {/* Dark Overlay for readability - Reduced opacity for visibility */}
-        <div className="absolute inset-0 bg-black/40" />
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/80" />
-      </div>
+
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center text-white px-6">
@@ -52,8 +35,8 @@ const Hero = () => {
           transition={{ duration: 0.7, ease: "easeOut" }}
           className="text-5xl md:text-6xl font-extrabold drop-shadow-2xl"
         >
-          Transform Your Vision Into{" "}
-          <span className="text-blue-400">Digital Reality.</span>
+          Growth Infrastructure for {" "}
+          <span className="text-blue-400">D2C & Ecommerce Brands.</span>
         </motion.h1>
 
         <motion.p

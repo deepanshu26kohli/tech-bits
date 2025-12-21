@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +10,9 @@ const Contact = () => {
     email: "",
     contactNumber: "",
     message: "",
+    storeUrl: "",
+    monthlyOrders: "",
+    primaryChallenge: "",
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(false);
@@ -40,6 +44,14 @@ const Contact = () => {
       newErrors.message = "Message must be at least 10 characters.";
     }
 
+    if (!formData.monthlyOrders.trim()) {
+      newErrors.monthlyOrders = "Monthly orders is required.";
+    }
+
+    if (!formData.primaryChallenge) {
+      newErrors.primaryChallenge = "Please select a primary challenge.";
+    }
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -65,6 +77,9 @@ const Contact = () => {
           email: "",
           contactNumber: "",
           message: "",
+          storeUrl: "",
+          monthlyOrders: "",
+          primaryChallenge: "",
         });
       } else {
         setSuccess("❌ Failed to send. Try again later.");
@@ -89,7 +104,7 @@ const Contact = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-4xl md:text-5xl font-bold mb-4"
         >
-          Get in <span className="text-blue-400">Touch</span>
+          Talk to a <span className="text-blue-400">D2C Growth Specialist</span>
         </motion.h2>
 
         <motion.p
@@ -98,9 +113,7 @@ const Contact = () => {
           transition={{ delay: 0.2, duration: 0.6 }}
           className="text-gray-300 max-w-2xl mx-auto mb-12"
         >
-          Have an idea or project in mind? Let’s talk and bring your vision to
-          life. Our team is here to answer questions and craft solutions
-          tailored to your business.
+          Running an ecommerce brand? Let’s identify where you’re losing revenue and how to fix it.
         </motion.p>
 
         {/* Contact Form */}
@@ -145,7 +158,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div>
+          <div className="mb-6">
             <input
               type="email"
               placeholder="Your Email (Optional)"
@@ -153,17 +166,63 @@ const Contact = () => {
               onChange={(e) =>
                 setFormData({ ...formData, email: e.target.value })
               }
-              className="w-full px-4 py-3 mb-6 rounded-lg bg-white/5 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+              className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
             />
             {errors.email && (
-              <p className="text-red-400 text-sm mb-4">{errors.email}</p>
+              <p className="text-red-400 text-sm mt-1">{errors.email}</p>
+            )}
+          </div>
+
+          <div className="grid sm:grid-cols-2 gap-6 mb-6">
+            <div>
+              <input
+                type="text"
+                placeholder="Store Website URL (Optional)"
+                value={formData.storeUrl}
+                onChange={(e) =>
+                  setFormData({ ...formData, storeUrl: e.target.value })
+                }
+                className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+              />
+            </div>
+            <div>
+              <input
+                type="text"
+                placeholder="Monthly Orders"
+                value={formData.monthlyOrders}
+                onChange={(e) =>
+                  setFormData({ ...formData, monthlyOrders: e.target.value })
+                }
+                className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+              />
+              {errors.monthlyOrders && (
+                <p className="text-red-400 text-sm mt-1">{errors.monthlyOrders}</p>
+              )}
+            </div>
+          </div>
+
+          <div className="mb-6">
+            <label className="block text-gray-300 mb-2">What are you struggling with most?</label>
+            <select
+              value={formData.primaryChallenge}
+              onChange={(e) => setFormData({ ...formData, primaryChallenge: e.target.value })}
+              className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 transition [&>option]:text-black"
+            >
+              <option value="" disabled className="text-gray-500">Select Primary Challenge</option>
+              <option value="High COD RTO">High COD RTO</option>
+              <option value="Low conversion rate">Low conversion rate</option>
+              <option value="Checkout drop-offs">Checkout drop-offs</option>
+              <option value="Scaling profitably">Scaling profitably</option>
+            </select>
+            {errors.primaryChallenge && (
+              <p className="text-red-400 text-sm mt-1">{errors.primaryChallenge}</p>
             )}
           </div>
 
           <div>
             <textarea
-              placeholder="Your Message"
-              rows={5}
+              placeholder="Any other details? (Optional)"
+              rows={3}
               value={formData.message}
               onChange={(e) =>
                 setFormData({ ...formData, message: e.target.value })
@@ -180,7 +239,7 @@ const Contact = () => {
             disabled={loading}
             className="w-full py-3 rounded-lg bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-600 hover:opacity-90 transition font-semibold shadow-lg disabled:opacity-50"
           >
-            {loading ? "Sending..." : "Send Message"}
+            {loading ? "Sending..." : "Review My Store"}
           </button>
 
           {success && (
@@ -188,20 +247,29 @@ const Contact = () => {
           )}
         </motion.form>
 
-        {/* Contact Info */}
-        <motion.div
+        {/* WhatsApp Info */}
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.6 }}
-          className="mt-12"
+          className="mt-12 flex flex-col items-center"
         >
-          <p className="text-gray-300">
-            Or reach us directly at{" "}
-            <span className="text-blue-400 font-semibold">
-              info@launchurplatform.com
-            </span>
+          <p className="text-gray-300 mb-4 text-lg">
+            Prefer WhatsApp? Talk to a D2C expert directly
           </p>
-        </motion.div>
+          <a
+            href="https://wa.me/91XXXXXXXXXX" // Replace with actual number
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-6 py-3 bg-[#25D366] text-white rounded-full font-bold hover:bg-[#1EBE57] transition shadow-lg"
+          >
+            <FaWhatsapp className="text-2xl" />
+            Chat on WhatsApp
+          </a>
+          <p className="text-gray-400 text-sm mt-3">
+            For Indian D2C founders, WhatsApp converts 2–3× better.
+          </p>
+        </motion.div> */}
       </div>
     </section>
   );

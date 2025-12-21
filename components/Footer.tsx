@@ -16,9 +16,10 @@ const Footer = () => {
           <h3 className="text-2xl font-bold text-white mb-3">
             Launch<span className="text-blue-400">Ur</span>Platform
           </h3>
+          <h4>Built for D2C & Ecommerce Brands</h4>
           <p className="text-gray-400 text-sm leading-relaxed">
-            Empowering businesses with end-to-end digital solutions.
-            From web development to cloud strategies — we launch your platform to success 🚀
+            We help online brands improve conversions, reduce COD RTO, and scale profitably using performance-driven platforms.
+
           </p>
         </div>
 
@@ -71,8 +72,7 @@ const Footer = () => {
       <div className="relative max-w-7xl mx-auto mt-12 border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between text-sm text-gray-500">
         <p>© {new Date().getFullYear()} LaunchUrPlatform. All rights reserved.</p>
         <p>
-          Built with ❤️ by{" "}
-          <span className="text-blue-400 font-semibold">LaunchUrPlatform Team</span>
+          Built by engineers who understand ecommerce & logistics.
         </p>
       </div>
     </footer>
