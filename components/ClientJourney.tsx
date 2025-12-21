@@ -1,8 +1,10 @@
 "use client";
 
-import React from "react";
+import { useRouter } from "next/navigation";
 
 const ClientJourney = () => {
+    const router = useRouter();
+
     return (
         <section className="py-24 relative overflow-hidden bg-black text-white">
             {/* Background glow effect matches Portfolio/About styles */}
@@ -41,9 +43,9 @@ const ClientJourney = () => {
                                 <div className="bg-white/5 border border-white/10 p-8 rounded-2xl hover:border-blue-400/30 transition-all relative">
                                     {/* Mobile Arrow/Connector */}
                                     <div className="absolute top-8 -left-4 w-4 h-0.5 bg-blue-500/30 md:hidden"></div>
-                                    <h4 className="text-xl font-bold text-white mb-3">Beyond Social Media</h4>
+                                    <h4 className="text-xl font-bold text-white mb-3">Total Brand Control</h4>
                                     <p className="text-gray-300 leading-relaxed text-sm">
-                                        You{"'"}ve successfully built a following on Instagram, but relying solely on a social platform limits your growth and control. We help you take the next big step.
+                                        Move beyond the limits of Instagram. We help you build a professional foundation that gives you <span className="text-blue-400">100% control</span> over your growth.
                                     </p>
                                 </div>
                             </div>
@@ -61,9 +63,9 @@ const ClientJourney = () => {
                                 <div className="bg-white/5 border border-white/10 p-8 rounded-2xl hover:border-pink-500/30 transition-all relative">
                                     {/* Mobile Arrow/Connector */}
                                     <div className="absolute top-8 -left-4 w-4 h-0.5 bg-pink-500/30 md:hidden"></div>
-                                    <h4 className="text-xl font-bold text-white mb-3">Custom E-Commerce Hub</h4>
+                                    <h4 className="text-xl font-bold text-white mb-3">Custom Digital Hub</h4>
                                     <p className="text-gray-300 leading-relaxed text-sm">
-                                        We custom-develop a <span className="text-pink-400">robust, secure website</span> that fully integrates with your brand. This gives you a professional, centralized sales hub, eliminating platform reliance.
+                                        Get a <span className="text-pink-400">high-performance, secure website</span> built just for you. Centralize your sales in a professional shop that reflects your unique brand.
                                     </p>
                                 </div>
                             </div>
@@ -86,9 +88,9 @@ const ClientJourney = () => {
                             <div className="pl-24 md:pl-0 w-full md:w-5/12 text-left">
                                 <div className="bg-white/5 border border-white/10 p-8 rounded-2xl hover:border-purple-400/30 transition-all relative">
                                     <div className="absolute top-8 -left-4 w-4 h-0.5 bg-purple-500/30 md:hidden"></div>
-                                    <h4 className="text-xl font-bold text-white mb-3">Growth & Profitability</h4>
+                                    <h4 className="text-xl font-bold text-white mb-3">Maximized Profitability</h4>
                                     <p className="text-gray-300 leading-relaxed text-sm">
-                                        Our marketing team deploys strategies to maximize reach, while our proprietary <span className="text-purple-400 font-semibold">RTO prediction system</span> dramatically boosts profitability by preventing return losses.
+                                        Grow your audience with expert marketing and protect your revenue using our <span className="text-purple-400 font-semibold">smart systems</span> designed to ensure every sale is a success.
                                     </p>
                                 </div>
                             </div>
@@ -105,9 +107,9 @@ const ClientJourney = () => {
                             <div className="pl-24 md:pl-0 w-full md:w-5/12 text-left md:text-right md:order-1">
                                 <div className="bg-white/5 border border-white/10 p-8 rounded-2xl hover:border-green-400/30 transition-all relative">
                                     <div className="absolute top-8 -left-4 w-4 h-0.5 bg-green-500/30 md:hidden"></div>
-                                    <h4 className="text-xl font-bold text-white mb-3">20+ Experts Strong</h4>
+                                    <h4 className="text-xl font-bold text-white mb-3">Expert Support</h4>
                                     <p className="text-gray-300 leading-relaxed text-sm">
-                                        We are not just freelancers. We are a dedicated <span className="text-green-400">Web Development & Marketing Company</span> with over 20 members working around the clock to scale your financial future.
+                                        Partner with a <span className="text-green-400">full-service agency</span>. Our dedicated specialists work 24/7 to manage your tech and marketing so you can focus on your vision.
                                     </p>
                                 </div>
                             </div>
@@ -128,17 +130,23 @@ const ClientJourney = () => {
 
                             {/* Content Right */}
                             <div className="pl-24 md:pl-0 w-full md:w-5/12 text-left">
-                                <a href="/contact" className="block group cursor-pointer">
-                                    <div className="bg-blue-600/10 border border-blue-500/30 p-8 rounded-2xl hover:bg-blue-600/20 hover:border-blue-400 transition-all relative group-hover:scale-[1.02]">
-                                        <div className="absolute top-8 -left-4 w-4 h-0.5 bg-blue-500/30 md:hidden"></div>
-                                        <h4 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                                            Start Your Journey <span className="text-blue-400">→</span>
-                                        </h4>
-                                        <p className="text-gray-300 leading-relaxed text-sm">
-                                            Ready to transform your business? connect with us today and let us build something extraordinary together.
-                                        </p>
+                                <div
+                                    onClick={() => router.push("/contact")}
+                                    className="block group cursor-pointer bg-blue-600/10 border border-blue-500/30 p-8 rounded-2xl hover:bg-blue-600/20 hover:border-blue-400 transition-all relative group-hover:scale-[1.02]"
+                                >
+                                    <div className="absolute top-8 -left-4 w-4 h-0.5 bg-blue-500/30 md:hidden"></div>
+                                    <h4 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
+                                        Start Your Journey <span className="text-blue-400">→</span>
+                                    </h4>
+                                    <p className="text-gray-300 leading-relaxed text-sm">
+                                        Ready to transform your business? connect with us today and let us build something extraordinary together.
+                                    </p>
+                                    <div className="mt-6 flex justify-end">
+                                        <span className="px-5 py-2 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white text-sm font-semibold rounded-lg shadow-md transition-all hover:shadow-blue-500/25">
+                                            Click to Begin
+                                        </span>
                                     </div>
-                                </a>
+                                </div>
                             </div>
                         </div>
                     </div>

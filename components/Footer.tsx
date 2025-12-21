@@ -17,7 +17,7 @@ const Footer = () => {
             Launch<span className="text-blue-400">Ur</span>Platform
           </h3>
           <p className="text-gray-400 text-sm leading-relaxed">
-            Empowering businesses with end-to-end digital solutions. 
+            Empowering businesses with end-to-end digital solutions.
             From web development to cloud strategies — we launch your platform to success 🚀
           </p>
         </div>
@@ -33,16 +33,16 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Quick Links */}
-        {/* <div>
-          <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
-          <ul className="space-y-2 text-sm">
-            <li><Link href="/privacy-policy" className="hover:text-blue-400">Privacy Policy</Link></li>
-            <li><Link href="/terms" className="hover:text-blue-400">Terms & Conditions</Link></li>
-            <li><Link href="/careers" className="hover:text-blue-400">Careers</Link></li>
-            <li><Link href="/blog" className="hover:text-blue-400">Blog</Link></li>
-          </ul>
-        </div> */}
+        {/* Address */}
+        <div>
+          <h4 className="text-lg font-semibold text-white mb-4">Our Office</h4>
+          <p className="text-gray-400 text-sm leading-relaxed">
+            201, A Block, Leo Homes, Shri Vaibhav Vibha , 2A main road, <br />
+            Kaverappa Layout, Kadubeesanhalli, <br />
+            Marathalli, Bangalore. <br />
+            Pincode - 560103
+          </p>
+        </div>
 
         {/* Social Links */}
         {/* <div>
