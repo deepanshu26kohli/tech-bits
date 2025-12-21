@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { FaWhatsapp } from "react-icons/fa";
+
 
 const ContactContent = () => {
     const [formData, setFormData] = useState({
