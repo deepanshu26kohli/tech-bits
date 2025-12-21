@@ -139,7 +139,7 @@ const About = () => {
             ))}
           </div>
           <p className="text-gray-300 text-lg italic">
-            "If you’re running real orders and want to understand what’s holding your store back, we’re built for you."
+            "If you are running real orders and want to understand what is holding your store back, we’re built for you."
           </p>
         </div>
 
