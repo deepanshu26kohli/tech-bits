@@ -25,9 +25,9 @@ const Header = () => {
       className="fixed top-0 left-0 w-full z-50"
     >
       <div
-        className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center
-                   bg-white/10 backdrop-blur-xl border border-white/20
-                   rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.3)]"
+        className=" px-6 py-4 flex justify-between items-center
+                   bg-black 
+"
       >
         {/* Logo */}
         <Link href="/" className="text-2xl font-bold text-white">
@@ -42,11 +42,10 @@ const Header = () => {
               <Link
                 key={index}
                 href={link.href}
-                className={`transition font-medium ${
-                  isActive
-                    ? "text-blue-400 "
-                    : "text-gray-200 hover:text-blue-400"
-                }`}
+                className={`transition font-medium ${isActive
+                  ? "text-blue-400 "
+                  : "text-gray-200 hover:text-blue-400"
+                  }`}
               >
                 {link.name}
               </Link>
@@ -79,11 +78,10 @@ const Header = () => {
                 key={index}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className={`transition font-medium ${
-                  isActive
-                    ? "text-blue-400 border-b-2 border-blue-400"
-                    : "text-gray-200 hover:text-blue-400"
-                }`}
+                className={`transition font-medium ${isActive
+                  ? "text-blue-400 border-b-2 border-blue-400"
+                  : "text-gray-200 hover:text-blue-400"
+                  }`}
               >
                 {link.name}
               </Link>
