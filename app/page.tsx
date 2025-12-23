@@ -56,20 +56,7 @@ export default function Home() {
 
       {/* Hero Section with Lightning */}
       {/* <div className="relative  h-auto  bg-black "> */}
-      <div className="absolute top-0 left-0 w-full  h-full">
-        <LightRaysWrapper
-          raysOrigin="top-center"
-          raysColor="#00ffff"
-          raysSpeed={1}
-          lightSpread={2}
-          rayLength={30}
-          followMouse={true}
-          mouseInfluence={1}
-          noiseAmount={0.1}
-          distortion={0.05}
-          className="custom-rays absolute"
-        />
-      </div>
+
 
       {/* </div> */}
       <Hero />
