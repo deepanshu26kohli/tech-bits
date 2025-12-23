@@ -26,7 +26,7 @@ const Header = () => {
     >
       <div
         className=" px-6 py-4 flex justify-between items-center
-                   bg-black 
+                   bg-[#0F2241]  
 "
       >
         {/* Logo */}

@@ -28,7 +28,7 @@ const features = [
 
 const WhyChooseUs = () => {
     return (
-        <section className="relative py-24 bg-black text-white overflow-hidden">
+        <section className="relative py-24 bg-[#0F2241]  text-white overflow-hidden">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_#2563eb10,_transparent_70%)] pointer-events-none" />
 
             <div className="relative max-w-6xl mx-auto px-6 text-center">

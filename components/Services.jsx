@@ -154,7 +154,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="relative bg-black/80 text-white ">
+    <section className="relative bg-[#0F2241] /80 text-white ">
 
       <div className="max-w-6xl mx-auto p-6 mt-10 text-center">
         <h2
@@ -172,7 +172,7 @@ const Services = () => {
           pauseOnHover
           scaleOnHover
           fadeOut
-          fadeOutColor="black"
+          fadeOutColor="#0F2241"
           ariaLabel="Technology partners"
         />
         <p className="text-gray-300 mt-5 max-w-2xl mx-auto mb-12">

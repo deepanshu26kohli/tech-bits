@@ -52,10 +52,10 @@ export default function Home() {
   // }, []);
 
   return (
-    <main className="relative w-full bg-black">
+    <main className="relative w-full bg-[#0F2241] ">
 
       {/* Hero Section with Lightning */}
-      {/* <div className="relative  h-auto  bg-black "> */}
+      {/* <div className="relative  h-auto  bg-[#0F2241]  "> */}
 
 
       {/* </div> */}
