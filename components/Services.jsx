@@ -40,6 +40,13 @@ import {
   SiReduxsaga,
   SiJsonwebtokens,
   SiAntdesign,
+  SiInstagram,
+  SiFacebook,
+  SiMeta,
+  SiGoogleads,
+  SiGooglemarketingplatform,
+  SiTiktok,
+  SiLinkedin,
 } from "react-icons/si";
 const iconStyle = "w-8 h-8"; // ✅ Consistent size for all icons
 
@@ -110,6 +117,17 @@ const techLogos = [
   { node: <SiTensorflow className={`${iconStyle} text-[#FF6F00]`} />, title: "TensorFlow", href: "https://www.tensorflow.org" },
   { node: <SiPytorch className={`${iconStyle} text-[#EE4C2C]`} />, title: "PyTorch", href: "https://pytorch.org" },
   { node: <SiOpenai className={`${iconStyle} text-[#412991]`} />, title: "OpenAI", href: "https://openai.com" },
+
+  // --------------------
+  // 📢 MARKETING & SOCIAL MEDIA
+  // --------------------
+  { node: <SiInstagram className={`${iconStyle} text-[#E4405F]`} />, title: "Instagram", href: "https://instagram.com" },
+  { node: <SiFacebook className={`${iconStyle} text-[#1877F2]`} />, title: "Facebook", href: "https://facebook.com" },
+  { node: <SiMeta className={`${iconStyle} text-[#0668E1]`} />, title: "Meta", href: "https://meta.com" },
+  { node: <SiGoogleads className={`${iconStyle} text-[#4285F4]`} />, title: "Google Ads", href: "https://ads.google.com" },
+  { node: <SiGooglemarketingplatform className={`${iconStyle} text-[#4285F4]`} />, title: "Google Marketing", href: "https://marketingplatform.google.com" },
+  { node: <SiTiktok className={`${iconStyle} text-[#000000]`} />, title: "TikTok", href: "https://tiktok.com" },
+  { node: <SiLinkedin className={`${iconStyle} text-[#0A66C2]`} />, title: "LinkedIn", href: "https://linkedin.com" },
 ];
 const services = [
   {
