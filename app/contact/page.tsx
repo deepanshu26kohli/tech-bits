@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import ContactContent from "@/components/ContactContent";
+import RoadToProfitability from "@/components/RoadToProfitability";
 
 export const metadata: Metadata = {
   title: "Contact Us | LaunchUrPlatform",
@@ -27,7 +28,12 @@ export const metadata: Metadata = {
 };
 
 const Contact = () => {
-  return <ContactContent />;
+  return (
+    <>
+      <ContactContent />
+      <RoadToProfitability />
+    </>
+  );
 };
 
 export default Contact;

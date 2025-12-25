@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { ChevronDown } from "lucide-react";
 
 
 const ContactContent = () => {
@@ -203,17 +204,20 @@ const ContactContent = () => {
 
                     <div className="mb-6">
                         <label className="block text-gray-300 mb-2">What are you struggling with most?</label>
-                        <select
-                            value={formData.primaryChallenge}
-                            onChange={(e) => setFormData({ ...formData, primaryChallenge: e.target.value })}
-                            className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 transition [&>option]:text-black"
-                        >
-                            <option value="" disabled className="text-gray-500">Select Primary Challenge</option>
-                            <option value="High COD RTO">High COD RTO</option>
-                            <option value="Low conversion rate">Low conversion rate</option>
-                            <option value="Checkout drop-offs">Checkout drop-offs</option>
-                            <option value="Scaling profitably">Scaling profitably</option>
-                        </select>
+                        <div className="relative">
+                            <select
+                                value={formData.primaryChallenge}
+                                onChange={(e) => setFormData({ ...formData, primaryChallenge: e.target.value })}
+                                className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 transition appearance-none [&>option]:bg-gray-900 [&>option]:text-white"
+                            >
+                                <option value="" disabled className="text-gray-500">Select Primary Challenge</option>
+                                <option value="High COD RTO">High COD RTO</option>
+                                <option value="Low conversion rate">Low conversion rate</option>
+                                <option value="Checkout drop-offs">Checkout drop-offs</option>
+                                <option value="Scaling profitably">Scaling profitably</option>
+                            </select>
+                            <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none w-5 h-5" />
+                        </div>
                         {errors.primaryChallenge && (
                             <p className="text-red-400 text-sm mt-1">{errors.primaryChallenge}</p>
                         )}
