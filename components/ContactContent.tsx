@@ -4,24 +4,22 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, ArrowLeft, ArrowRight, Star } from "lucide-react";
 import Image from "next/image";
-import businessGrowth from "@/public/business_growth.webp";
-import getInTouch from "@/public/contact_us.jpg";
-import businessSuccess from "@/public/contact_business_success.jpg";
+import contactusimg from "@/public/contactusimg.png"
 
 // High-quality themed images from Unsplash
 const CAROUSEL_IMAGES = [
     {
-        src: businessGrowth,
+        src: contactusimg,
         alt: "Business Growth",
         text: "Grow your business with Launch Your Platform"
     },
     {
-        src: getInTouch,
+        src: contactusimg,
         alt: "Get in touch",
         text: "Get in touch with us to know more"
     },
     {
-        src: businessSuccess,
+        src: contactusimg,
         alt: "Business Success",
         text: "Take your business to the next level with Launch Your Platform"
     }
@@ -181,9 +179,9 @@ const ContactContent = () => {
                             <h2 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
                                 Talk to a <span className="text-blue-400">D2C Growth Specialist</span>
                             </h2>
-                            <p className="text-gray-300 text-lg max-w-xl">
+                            {/* <p className="text-gray-300 text-lg max-w-xl">
                                 Running an ecommerce brand? Let’s identify where you’re losing revenue and how to fix it.
-                            </p>
+                            </p> */}
                         </div>
 
                         <form
@@ -311,7 +309,7 @@ const ContactContent = () => {
                                         alt={CAROUSEL_IMAGES[currentImageIndex].alt}
                                         fill
                                         unoptimized // Using external URLs, next/image optimization might need domain config, unoptimized is safer for quick demo
-                                        className="object-contain opacity-60"
+                                        className="object-cover opacity-60"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-transparent mix-blend-overlay" />
 
