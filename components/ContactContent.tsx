@@ -37,7 +37,7 @@ const TESTIMONIALS = [
     {
         name: "Rahul Verma",
         brand: "Urban Weaves",
-        text: "We were stuck at 50 orders/day. Now we're doing 200+ comfortably.",
+        text: "We were stuck at 50 orders/day. Now we are doing 200+ comfortably.",
         rating: 5
     },
     {
