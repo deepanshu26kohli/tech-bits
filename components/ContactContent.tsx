@@ -388,7 +388,7 @@ const ContactContent = () => {
                                         ))}
                                     </div>
                                     <p className="text-xl md:text-2xl text-gray-200 italic mb-6">
-                                        "{TESTIMONIALS[currentTestimonialIndex].text}"
+                                        {TESTIMONIALS[currentTestimonialIndex].text}
                                     </p>
                                     <div>
                                         <h4 className="text-lg font-bold text-white">{TESTIMONIALS[currentTestimonialIndex].name}</h4>
