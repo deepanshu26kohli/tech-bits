@@ -2,6 +2,7 @@
 
 import LightRaysWrapper from "@/components/LightRaysWrapper";
 import Hero from "@/components/Hero";
+import SolutionsTab from "@/components/SolutionsTab";
 import Services from "@/components/Services";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import ClientJourney from "@/components/ClientJourney";
@@ -60,6 +61,7 @@ export default function Home() {
 
       {/* </div> */}
       <Hero />
+      <SolutionsTab />
       {/* Next Sections */}
       <Services />
       <WhyChooseUs />
