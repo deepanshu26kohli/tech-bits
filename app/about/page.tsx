@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     url: "https://launchurplatform.com/about",
     images: [
       {
-        url: "/default-og-image.jpg",
+        url: "/lyp-preview.png",
         width: 1200,
         height: 630,
         alt: "About LaunchUrPlatform",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "About Us | LaunchUrPlatform",
     description: "We work exclusively with D2C brands to fix growth blockers. Learn how we connect storefront, checkout, and logistics into one engine.",
-    images: ["/default-og-image.jpg"],
+    images: ["/lyp-preview.png"],
   },
 };
 

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     url: "https://launchurplatform.com", // Keeping it generic or as placeholder if actual domain isn't known, but usually good to put something
     images: [
       {
-        url: "/default-og-image.jpg", // Using the default image from user snippet
+        url: "/lyp-preview.png",
         width: 1200,
         height: 630,
         alt: "LaunchUrPlatform",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "LaunchUrPlatform - D2C Growth Infrastructure",
     description: "We help D2C brands scale profitably. Fix low conversions, RTO, and weak infrastructure with our proven profit-focused systems.",
-    images: ["/default-og-image.jpg"],
+    images: ["/lyp-preview.png"],
   },
 };
 

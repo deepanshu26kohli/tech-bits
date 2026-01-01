@@ -19,6 +19,13 @@ export const metadata: Metadata = {
   title: "Launchur Platform",
   description:
     "Launchur Platform is a leading IT solutions company offering custom software development, web and mobile app development, cloud solutions, and digital transformation services. We empower businesses with cutting-edge technology, scalable IT services, and innovative digital strategies to drive growth and success.",
+  openGraph: {
+    images: ["/lyp-preview.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/lyp-preview.png"],
+  },
 };
 
 export default function RootLayout({
