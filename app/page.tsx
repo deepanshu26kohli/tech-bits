@@ -13,10 +13,10 @@ import CTA from "@/components/CTA";
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "LaunchUrPlatform - D2C Growth Infrastructure",
+  title: "Launch Your Platform - Build, Market & Scale Your D2C Business",
   description: "We help D2C brands scale profitably. Fix low conversions, RTO, and weak infrastructure with our proven profit-focused systems.",
   openGraph: {
-    title: "LaunchUrPlatform - D2C Growth Infrastructure",
+    title: "Launch Your Platform - Build, Market & Scale Your D2C Business",
     description: "We help D2C brands scale profitably. Fix low conversions, RTO, and weak infrastructure with our proven profit-focused systems.",
     type: "website",
     url: "https://launchurplatform.com", // Keeping it generic or as placeholder if actual domain isn't known, but usually good to put something
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "LaunchUrPlatform - D2C Growth Infrastructure",
+    title: "Launch Your Platform - Build, Market & Scale Your D2C Business",
     description: "We help D2C brands scale profitably. Fix low conversions, RTO, and weak infrastructure with our proven profit-focused systems.",
     images: ["/lyp-preview.png"],
   },
