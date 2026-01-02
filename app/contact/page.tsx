@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     url: "https://launchurplatform.com/contact",
     images: [
       {
-        url: "/default-og-image.jpg",
+        url: "/lyp-preview.png",
         width: 1200,
         height: 630,
         alt: "Contact LaunchUrPlatform",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Contact Us | LaunchUrPlatform",
     description: "Talk to a D2C Growth Specialist. Identify where you're losing revenue and how to fix it.",
-    images: ["/default-og-image.jpg"],
+    images: ["/lyp-preview.png"],
   },
 };
 
