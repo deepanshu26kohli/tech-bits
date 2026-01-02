@@ -47,6 +47,7 @@ import {
   SiGooglemarketingplatform,
   SiTiktok,
   SiLinkedin,
+  SiShopify,
 } from "react-icons/si";
 const iconStyle = "w-8 h-8"; // ✅ Consistent size for all icons
 
@@ -64,6 +65,9 @@ const techLogos = [
   { node: <SiAntdesign className={`${iconStyle} text-[#0170FE]`} />, title: "Ant Design", href: "https://ant.design" },
   { node: <SiHtml5 className={`${iconStyle} text-[#E34F26]`} />, title: "HTML5", href: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
   { node: <SiCss3 className={`${iconStyle} text-[#1572B6]`} />, title: "CSS3", href: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+  {
+    node: <SiShopify className={`${iconStyle} text-green-500`} />, title: "Shopify", href: "https://shopify.com"
+  },
 
   // --------------------
   // ⚡ STATE MANAGEMENT

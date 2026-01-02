@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
   {
@@ -33,15 +32,7 @@ const testimonials = [
 const Testimonials = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  const scrollMap = (direction: "left" | "right") => {
-    if (scrollRef.current) {
-      const scrollAmount = window.innerWidth * 0.85; // Scroll by one card width
-      scrollRef.current.scrollBy({
-        left: direction === "left" ? -scrollAmount : scrollAmount,
-        behavior: "smooth",
-      });
-    }
-  };
+
 
   return (
     <section className="relative bg-gradient-to-br from-black via-gray-900 to-blue-950 text-white py-24">
@@ -56,34 +47,40 @@ const Testimonials = () => {
         </p>
 
         <div className="relative">
-          {/* Mobile Arrows */}
-          <button
-            onClick={() => scrollMap("left")}
-            className="md:hidden absolute left-0 top-1/2 -translate-y-1/2 -ml-4 z-20 p-2 bg-blue-500/20 hover:bg-blue-500/40 border border-blue-500/50 rounded-full text-white transition-all backdrop-blur-sm"
-            aria-label="Previous testimonial"
-          >
-            <ChevronLeft className="w-6 h-6" />
-          </button>
 
-          <button
-            onClick={() => scrollMap("right")}
-            className="md:hidden absolute right-0 top-1/2 -translate-y-1/2 -mr-4 z-20 p-2 bg-blue-500/20 hover:bg-blue-500/40 border border-blue-500/50 rounded-full text-white transition-all backdrop-blur-sm"
-            aria-label="Next testimonial"
-          >
-            <ChevronRight className="w-6 h-6" />
-          </button>
 
           <div
             ref={scrollRef}
-            className="flex md:grid md:grid-cols-3 gap-8 overflow-x-auto md:overflow-visible snap-x snap-mandatory pb-8 md:pb-0 scrollbar-hide px-4 -mx-4 md:mx-0 md:px-0 scroll-smooth"
+            className="flex md:grid md:grid-cols-3 gap-6 overflow-x-auto md:overflow-visible snap-x snap-mandatory pb-8 md:pb-0 px-4 -mx-4 md:mx-0 md:px-0 scroll-smooth custom-scrollbar"
           >
+            <style jsx>{`
+              .custom-scrollbar::-webkit-scrollbar {
+                height: 6px;
+                display: block;
+              }
+              .custom-scrollbar::-webkit-scrollbar-track {
+                background: rgba(255, 255, 255, 0.05);
+                border-radius: 10px;
+              }
+              .custom-scrollbar::-webkit-scrollbar-thumb {
+                background: rgba(59, 130, 246, 0.5);
+                border-radius: 10px;
+              }
+              .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+                background: rgba(59, 130, 246, 0.8);
+              }
+              .custom-scrollbar {
+                scrollbar-width: thin;
+                scrollbar-color: rgba(59, 130, 246, 0.5) rgba(255, 255, 255, 0.05);
+              }
+            `}</style>
             {testimonials.map((t, index) => (
               <div
                 key={index}
-                className="min-w-[85vw] md:min-w-0 snap-center p-6 rounded-2xl shadow-lg border border-white/10 
+                className={`min-w-[80vw] md:min-w-0 snap-start p-6 rounded-2xl shadow-lg border border-white/10 
                              bg-white/10 backdrop-blur-lg 
                              hover:bg-blue-500/10 hover:border-blue-400/20 
-                             transition-colors duration-300 cursor-pointer flex flex-col items-center text-center"
+                             transition-colors duration-300 cursor-pointer flex flex-col items-center text-center`}
               >
                 <div className="w-16 h-16 mb-4 rounded-full bg-gradient-to-br from-blue-400 to-indigo-600 flex items-center justify-center text-lg font-bold text-white shadow-md flex-shrink-0">
                   {t.name.charAt(0)}

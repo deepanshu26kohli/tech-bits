@@ -53,8 +53,9 @@ export default function Home() {
   // }, []);
 
   return (
-    <main className="relative w-full bg-[#0F2241] ">
-
+    <main className="relative w-full bg-gradient-to-br from-gray-950 via-black to-gray-950 ">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.15),transparent_60%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(236,72,153,0.15),transparent_60%)]"></div>
       {/* Hero Section with Lightning */}
       {/* <div className="relative  h-auto  bg-[#0F2241]  "> */}
 

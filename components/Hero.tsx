@@ -24,7 +24,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative flex items-center justify-center min-h-[90vh] py-28 w-full overflow-hidden">
+    <section className="relative flex items-center justify-center min-h-[90vh] py-24  w-full overflow-hidden">
       {/* Background Carousel */}
 
 

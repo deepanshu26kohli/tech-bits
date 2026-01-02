@@ -53,7 +53,7 @@ const SolutionsTab = () => {
     const [activeTab, setActiveTab] = useState(tabs[0]);
 
     return (
-        <section className="p-6 max-w-7xl mx-auto relative z-10 border border-white/10 rounded-2xl ">
+        <section className="p-6 max-w-7xl mx-auto relative z-10 border border-white/25 rounded-2xl ">
             {/* Tab Navigation */}
             <div className="flex flex-wrap justify-center gap-4 mb-12 ">
                 {tabs.map((tab) => (

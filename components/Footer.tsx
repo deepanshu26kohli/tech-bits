@@ -69,9 +69,9 @@ const Footer = () => {
       </div>
 
       {/* Divider */}
-      <div className="relative max-w-7xl mx-auto mt-12 border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between text-sm text-gray-500">
+      <div className="relative max-w-7xl mx-auto mt-12 border-t border-white/10 pt-6 flex flex-col px-6 md:flex-row items-center justify-between text-sm text-gray-500">
         <p>© {new Date().getFullYear()} LaunchUrPlatform. All rights reserved.</p>
-        <p>
+        <p >
           Built by engineers who understand ecommerce & logistics.
         </p>
       </div>
