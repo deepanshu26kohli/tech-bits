@@ -6,6 +6,8 @@ import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
+import Image from "next/image";
+
 const navLinks = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
@@ -30,8 +32,17 @@ const Header = () => {
 "
       >
         {/* Logo */}
-        <Link href="/" className="text-2xl font-bold text-white">
-          <span className="text-blue-400">Launch</span>UrPlatform
+        <Link href="/" className="flex items-center gap-2 text-2xl font-bold text-white">
+          <Image
+            src="/logo.svg"
+            alt="LaunchUrPlatform Logo"
+            width={40}
+            height={40}
+            className="w-10 h-10 object-contain"
+          />
+          <span>
+            <span className="text-blue-400">Launch</span>UrPlatform
+          </span>
         </Link>
 
         {/* Desktop Nav */}
