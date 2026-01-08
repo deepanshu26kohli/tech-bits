@@ -266,7 +266,7 @@ const ContactContent = () => {
 
                             <div className="mb-6">
                                 <textarea
-                                    placeholder="Any other details? (Optional)"
+                                    placeholder="Any other details?"
                                     rows={3}
                                     value={formData.message}
                                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
