@@ -6,7 +6,7 @@ const ClientJourney = () => {
     const router = useRouter();
 
     return (
-        <section className="py-24 relative overflow-hidden bg-black text-white">
+        <section className="py-24 relative overflow-hidden bg-[#0F2241]  text-white">
             {/* Background glow effect matches Portfolio/About styles */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.15),transparent_60%)]"></div>
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(236,72,153,0.15),transparent_60%)]"></div>

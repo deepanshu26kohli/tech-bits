@@ -2,6 +2,7 @@
 
 
 import Link from "next/link";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -13,8 +14,17 @@ const Footer = () => {
       <div className="relative max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
         {/* Company Info */}
         <div>
-          <h3 className="text-2xl font-bold text-white mb-3">
-            Launch<span className="text-blue-400">Ur</span>Platform
+          <h3 className="flex items-center gap-2 text-2xl font-bold text-white mb-3">
+            <Image
+              src="/logo.svg"
+              alt="LaunchUrPlatform Logo"
+              width={32}
+              height={32}
+              className="w-8 h-8 object-contain"
+            />
+            <span>
+              Launch<span className="text-blue-400">Ur</span>Platform
+            </span>
           </h3>
           <h4>Built for D2C & Ecommerce Brands</h4>
           <p className="text-gray-400 text-sm leading-relaxed">
@@ -69,9 +79,9 @@ const Footer = () => {
       </div>
 
       {/* Divider */}
-      <div className="relative max-w-7xl mx-auto mt-12 border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between text-sm text-gray-500">
+      <div className="relative max-w-7xl mx-auto mt-12 border-t border-white/10 pt-6 flex flex-col px-6 md:flex-row items-center justify-between text-sm text-gray-500">
         <p>© {new Date().getFullYear()} LaunchUrPlatform. All rights reserved.</p>
-        <p>
+        <p >
           Built by engineers who understand ecommerce & logistics.
         </p>
       </div>

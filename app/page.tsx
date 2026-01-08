@@ -2,6 +2,7 @@
 
 import LightRaysWrapper from "@/components/LightRaysWrapper";
 import Hero from "@/components/Hero";
+import SolutionsTab from "@/components/SolutionsTab";
 import Services from "@/components/Services";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import ClientJourney from "@/components/ClientJourney";
@@ -52,27 +53,16 @@ export default function Home() {
   // }, []);
 
   return (
-    <main className="relative w-full bg-black">
-
+    <main className="relative w-full bg-gradient-to-br from-gray-950 via-black to-gray-950 ">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.15),transparent_60%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(236,72,153,0.15),transparent_60%)]"></div>
       {/* Hero Section with Lightning */}
-      {/* <div className="relative  h-auto  bg-black "> */}
-      <div className="absolute top-0 left-0 w-full  h-full">
-        <LightRaysWrapper
-          raysOrigin="top-center"
-          raysColor="#00ffff"
-          raysSpeed={1}
-          lightSpread={2}
-          rayLength={30}
-          followMouse={true}
-          mouseInfluence={1}
-          noiseAmount={0.1}
-          distortion={0.05}
-          className="custom-rays absolute"
-        />
-      </div>
+      {/* <div className="relative  h-auto  bg-[#0F2241]  "> */}
+
 
       {/* </div> */}
       <Hero />
+      <SolutionsTab />
       {/* Next Sections */}
       <Services />
       <WhyChooseUs />

@@ -80,7 +80,7 @@ const About = () => {
             At <span className="text-blue-400 font-semibold">LaunchUrPlatform</span>, we work exclusively with D2C and ecommerce brands.
           </p>
           <p className="text-gray-400 text-lg leading-relaxed">
-            We help online businesses fix the real problems that block growth—low conversions, high COD returns, delivery failures, and weak infrastructure. Instead of just building websites, we design profit-focused systems that connect storefront, checkout, and last-mile delivery into one scalable growth engine.
+            We help online businesses fix the real problems that block growth and conversions, high COD returns, delivery failures, and weak infrastructure. Instead of just building websites, we design profit-focused systems that connect storefront, checkout, and last-mile delivery into one scalable growth engine.
           </p>
           <p className="text-gray-400 text-lg leading-relaxed mt-6">
             We’re engineers at heart, but we think like operators. Every solution we build is driven by real ecommerce data, not assumptions.

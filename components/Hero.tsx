@@ -24,7 +24,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative flex items-center justify-center min-h-[90vh] py-28 w-full overflow-hidden">
+    <section className="relative flex items-center justify-center min-h-[90vh] py-24  w-full overflow-hidden">
       {/* Background Carousel */}
 
 
@@ -57,17 +57,12 @@ const Hero = () => {
         >
           {/* ✅ Get Started -> Contact Page */}
           <Link href="/contact">
-            <button className="px-6 py-3 text-lg rounded-xl bg-blue-500 hover:bg-blue-600 transition duration-300 shadow-[0_0_20px_rgba(59,130,246,0.5)]">
+            <button className="px-6 py-3 text-lg rounded-xl bg-blue-500 hover:bg-blue-600 transition duration-300 ">
               Get Started
             </button>
           </Link>
 
-          {/* ✅ Book a Demo -> Demo Page */}
-          <Link href="/book-demo">
-            <button className="px-6 py-3 text-lg rounded-xl border border-white text-white hover:bg-white hover:text-blue-700 transition duration-300 backdrop-blur-sm bg-white/5">
-              Book a Demo
-            </button>
-          </Link>
+
         </motion.div>
 
         <CircularText

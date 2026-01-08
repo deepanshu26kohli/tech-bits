@@ -47,6 +47,7 @@ import {
   SiGooglemarketingplatform,
   SiTiktok,
   SiLinkedin,
+  SiShopify,
 } from "react-icons/si";
 const iconStyle = "w-8 h-8"; // ✅ Consistent size for all icons
 
@@ -64,6 +65,9 @@ const techLogos = [
   { node: <SiAntdesign className={`${iconStyle} text-[#0170FE]`} />, title: "Ant Design", href: "https://ant.design" },
   { node: <SiHtml5 className={`${iconStyle} text-[#E34F26]`} />, title: "HTML5", href: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
   { node: <SiCss3 className={`${iconStyle} text-[#1572B6]`} />, title: "CSS3", href: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+  {
+    node: <SiShopify className={`${iconStyle} text-green-500`} />, title: "Shopify", href: "https://shopify.com"
+  },
 
   // --------------------
   // ⚡ STATE MANAGEMENT
@@ -154,7 +158,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="relative bg-black/80 text-white ">
+    <section className="relative bg-[#0F2241] /80 text-white ">
 
       <div className="max-w-6xl mx-auto p-6 mt-10 text-center">
         <h2
@@ -172,11 +176,11 @@ const Services = () => {
           pauseOnHover
           scaleOnHover
           fadeOut
-          fadeOutColor="black"
+          fadeOutColor="#0F2241"
           ariaLabel="Technology partners"
         />
         <p className="text-gray-300 mt-5 max-w-2xl mx-auto mb-12">
-          We deliver world-class IT solutions powered by cutting-edge technologies. From ideation to deployment, we partner with you to build, innovate, and scale seamlessly — transforming challenges into competitive advantages.
+          We deliver world-class IT solutions powered by cutting-edge technologies. From ideation to deployment, we partner with you to build, innovate, and scale seamlessly and transforming challenges into competitive advantages.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
