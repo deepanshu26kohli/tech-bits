@@ -42,7 +42,6 @@ const tabs = [
             "Influencer Tracking",
             "Retention Analytics",
             "Multi-Channel Campaigns",
-            "Pixel Setup",
         ],
         image: marketingTab,
         color: "from-white to-white",

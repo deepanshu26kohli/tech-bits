@@ -62,12 +62,7 @@ const Hero = () => {
             </button>
           </Link>
 
-          {/* ✅ Book a Demo -> Demo Page */}
-          <Link href="/book-demo">
-            <button className="px-6 py-3 text-lg rounded-xl border border-white text-white hover:bg-white hover:text-blue-700 transition duration-300 backdrop-blur-sm bg-white/5">
-              Book a Demo
-            </button>
-          </Link>
+
         </motion.div>
 
         <CircularText

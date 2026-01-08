@@ -180,7 +180,7 @@ const Services = () => {
           ariaLabel="Technology partners"
         />
         <p className="text-gray-300 mt-5 max-w-2xl mx-auto mb-12">
-          We deliver world-class IT solutions powered by cutting-edge technologies. From ideation to deployment, we partner with you to build, innovate, and scale seamlessly — transforming challenges into competitive advantages.
+          We deliver world-class IT solutions powered by cutting-edge technologies. From ideation to deployment, we partner with you to build, innovate, and scale seamlessly and transforming challenges into competitive advantages.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">

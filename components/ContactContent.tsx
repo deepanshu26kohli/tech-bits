@@ -159,7 +159,7 @@ const ContactContent = () => {
     };
 
     return (
-        <section className="relative py-12 md:py-24 bg-gradient-to-br from-gray-950 via-gray-900 to-black text-white overflow-hidden min-h-screen">
+        <section className="relative py-24 md:py-24 bg-gradient-to-br from-gray-950 via-gray-900 to-black text-white overflow-hidden min-h-screen">
             {/* Background elements */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_#2563eb20,_transparent_60%)] pointer-events-none" />
 
