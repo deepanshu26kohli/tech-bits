@@ -78,7 +78,7 @@ export default function TechnologyPage({ params }: PageProps) {
                 <div className="bg-blue-600/10 border border-blue-500/30 rounded-2xl p-8 text-center">
                     <h2 className="text-2xl font-bold mb-4 text-white">Ready to build with {technology.title}?</h2>
                     <p className="text-gray-300 mb-8 max-w-lg mx-auto">
-                        Let's leverage the power of {technology.title} to create a scalable solution for your business.
+                        Let us leverage the power of {technology.title} to create a scalable solution for your business.
                     </p>
                     <Link
                         href="/contact"
