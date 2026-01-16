@@ -5,10 +5,10 @@ import Link from "next/link";
 import { ArrowLeft, CheckCircle } from "lucide-react";
 
 interface PageProps {
-    params: {
+    params: Promise<{
         category: string;
         slug: string;
-    };
+    }>;
 }
 
 export function generateStaticParams() {
@@ -27,8 +27,8 @@ export function generateStaticParams() {
 }
 
 
-export default function TechnologyPage({ params }: PageProps) {
-    const { category, slug } = params;
+export default async function TechnologyPage({ params }: PageProps) {
+    const { category, slug } = await params;
 
     const service = servicesData.find((s) => s.slug === category);
     if (!service) {
