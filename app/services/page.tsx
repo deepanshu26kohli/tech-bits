@@ -14,172 +14,48 @@ import {
   Megaphone,
   TrendingUp,
   Brain,
+  LucideIcon,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
+import { servicesData } from "@/lib/serviceData";
 
-// Define Service type
-type Service = {
-  icon: JSX.Element;
-  title: string;
-  desc: string;
-  details: {
-    intro: string;
-    features: string[];
-    technologies: string[];
-  };
+// Icon mapping
+const iconMap: Record<string, LucideIcon> = {
+  Code2,
+  Cloud,
+  ShieldCheck,
+  Smartphone,
+  BarChart,
+  Users,
+  Megaphone,
+  TrendingUp,
+  Brain,
 };
 
-const services: Service[] = [
-  {
-    icon: <Code2 className="w-10 h-10 text-blue-400" />,
-    title: "Web & App Development",
-    desc: "We build high-performance web and mobile applications tailored to your business needs using React, Next.js, Laravel, and modern stacks.",
-    details: {
-      intro:
-        "Our Web & App development service is designed to deliver scalable, fast, and user-friendly solutions that align with your business goals.",
-      features: [
-        "Responsive design for all devices",
-        "Scalable architecture for future growth",
-        "Performance optimization & SEO-ready",
-        "Cross-platform mobile apps",
-      ],
-      technologies: ["React", "Next.js", "Laravel", "Node.js", "TailwindCSS"],
-    },
-  },
-  {
-    icon: <Megaphone className="w-10 h-10 text-blue-400" />,
-    title: "Marketing & Branding",
-    desc: "Data-driven strategies to amplify your brand presence and drive real engagement.",
-    details: {
-      intro:
-        "We craft compelling marketing narratives and deploy targeted campaigns that resonate with your audience and drive growth.",
-      features: [
-        "SEO & Content Strategy",
-        "Social Media Management",
-        "PPC & Performance Marketing",
-        "Brand Identity Design",
-      ],
-      technologies: ["Google Ads", "Meta Ads"],
-    },
-  },
-  {
-    icon: <TrendingUp className="w-10 h-10 text-blue-400" />,
-    title: "Sales Maximization",
-    desc: "Conversion rate optimization strategies that turn visitors into paying customers.",
-    details: {
-      intro:
-        "Your traffic means nothing if it doesn't convert. We optimize every touchpoint to maximize revenue per user.",
-      features: [
-        "Conversion Rate Optimization (CRO)",
-        "Sales Funnel Architecture",
-        "A/B Testing",
-        "Customer Retention Strategies",
-      ],
-      technologies: ["Google Optimize", "ClickFunnels"],
-    },
-  },
-  {
-    icon: <Brain className="w-10 h-10 text-blue-400" />,
-    title: "RTO Prevention AI",
-    desc: "Proprietary AI models that predict and prevent Return-to-Origin losses for e-commerce.",
-    details: {
-      intro:
-        "Stop losing money on returns. Our AI analyzes hundreds of data points to flag risky orders before you ship them.",
-      features: [
-        "Real-time Risk Scoring",
-        "Address Validation",
-        "User Behavior Analysis",
-        "COD Verification Automation",
-      ],
-      technologies: ["Python", "TensorFlow", "Scikit-learn", "FastAPI", "Pandas"],
-    },
-  },
-  {
-    icon: <Cloud className="w-10 h-10 text-blue-400" />,
-    title: "Cloud & DevOps",
-    desc: "From AWS to Vercel, we set up scalable, secure, and automated deployments that ensure your product is always available.",
-    details: {
-      intro:
-        "We offer end-to-end cloud and DevOps solutions ensuring scalability, high availability, and faster deployments.",
-      features: [
-        "CI/CD pipelines setup",
-        "Infrastructure as Code (IaC)",
-        "Auto-scaling & monitoring",
-        "Multi-cloud deployment",
-      ],
-      technologies: ["AWS", "Docker", "Kubernetes", "Vercel", "Terraform"],
-    },
-  },
-  {
-    icon: <ShieldCheck className="w-10 h-10 text-blue-400" />,
-    title: "Security & Compliance",
-    desc: "We integrate authentication, role-based access control, and data protection measures to keep your platform safe.",
-    details: {
-      intro:
-        "Security is at the core of every project. We ensure your platform is compliant and resilient to attacks.",
-      features: [
-        "Role-based access control",
-        "Encryption & SSL implementation",
-        "GDPR & HIPAA compliance",
-        "Regular penetration testing",
-      ],
-      technologies: ["OAuth2", "JWT", "SSL", "Snyk", "OWASP"],
-    },
-  },
-  {
-    icon: <Smartphone className="w-10 h-10 text-blue-400" />,
-    title: "UI/UX & Design Systems",
-    desc: "Clean, responsive, and user-friendly designs that improve engagement and deliver seamless user experiences.",
-    details: {
-      intro:
-        "We create human-centered designs that elevate user experience while maintaining brand consistency.",
-      features: [
-        "Wireframes & prototypes",
-        "Interactive design systems",
-        "Responsive mobile-first approach",
-        "Accessibility standards (WCAG)",
-      ],
-      technologies: ["Figma", "Adobe XD", "TailwindCSS", "Framer Motion"],
-    },
-  },
-  {
-    icon: <BarChart className="w-10 h-10 text-blue-400" />,
-    title: "Data & Analytics",
-    desc: "We implement dashboards, BI solutions, and analytics pipelines so you can make data-driven decisions with confidence.",
-    details: {
-      intro:
-        "We help businesses unlock insights through powerful analytics and visualizations.",
-      features: [
-        "Custom dashboards",
-        "ETL pipelines",
-        "Real-time analytics",
-        "Business intelligence solutions",
-      ],
-      technologies: ["Tableau", "Power BI", "Snowflake", "Chart.js", "Supabase"],
-    },
-  },
-  {
-    icon: <Users className="w-10 h-10 text-blue-400" />,
-    title: "Consulting & Strategy",
-    desc: "We partner with you to define a clear digital roadmap, reduce technical risks, and launch faster with expert guidance.",
-    details: {
-      intro:
-        "Our consulting services ensure you make the right technology choices and scale efficiently.",
-      features: [
-        "Digital transformation strategies",
-        "Product roadmapping",
-        "Cost optimization",
-        "Agile coaching & mentoring",
-      ],
-      technologies: ["Agile", "Scrum", "Lean", "Jira", "Notion"],
-    },
-  },
-
-];
+// Define Service type derived from data but with resolved Icon
+type Service = typeof servicesData[0] & {
+  icon: JSX.Element;
+};
 
 const Services = () => {
   const [activeService, setActiveService] = useState<Service | null>(null);
   const router = useRouter();
+
+  // Transform data to include the icon component
+  const services: Service[] = servicesData.map((service) => ({
+    ...service,
+    icon: iconMap[service.iconName] ? (
+      <div className="w-10 h-10 text-blue-400">
+        {(() => {
+          const Icon = iconMap[service.iconName];
+          return <Icon className="w-full h-full" />;
+        })()}
+      </div>
+    ) : (
+      <Code2 className="w-10 h-10 text-blue-400" />
+    ),
+  }));
 
   return (
     <section className="relative bg-gradient-to-br from-gray-950 via-black to-gray-950 text-white py-24 overflow-hidden">
@@ -235,6 +111,9 @@ const Services = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            onClick={(e) => {
+              if (e.target === e.currentTarget) setActiveService(null);
+            }}
           >
             <motion.div
               className="relative bg-gray-900/90 backdrop-blur-xl rounded-2xl max-w-2xl w-full p-8 shadow-2xl border border-white/10"
@@ -266,12 +145,13 @@ const Services = () => {
               <h4 className="text-lg font-semibold text-white mb-2">Technologies</h4>
               <div className="flex flex-wrap gap-2 mb-6">
                 {activeService.details.technologies.map((tech, idx) => (
-                  <span
+                  <Link
                     key={idx}
-                    className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm"
+                    href={`/services/${activeService.slug}/${tech.slug}`}
+                    className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm hover:bg-blue-500/40 hover:text-blue-200 transition-colors"
                   >
-                    {tech}
-                  </span>
+                    {tech.title}
+                  </Link>
                 ))}
               </div>
 

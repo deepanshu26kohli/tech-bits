@@ -4,9 +4,11 @@ import LightRaysWrapper from "@/components/LightRaysWrapper";
 import Hero from "@/components/Hero";
 import SolutionsTab from "@/components/SolutionsTab";
 import Services from "@/components/Services";
+import TechStack from "@/components/TechStack";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import ClientJourney from "@/components/ClientJourney";
 import Testimonials from "@/components/Testimonials";
+import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 
 
@@ -65,9 +67,11 @@ export default function Home() {
       <SolutionsTab />
       {/* Next Sections */}
       <Services />
+      <TechStack />
       <WhyChooseUs />
       <ClientJourney />
       <Testimonials />
+      <FAQ />
       <CTA />
     </main>
   );
