@@ -48,10 +48,10 @@ const Footer = () => {
         <div>
           <h4 className="text-lg font-semibold text-white mb-4">Our Office</h4>
           <p className="text-gray-400 text-sm leading-relaxed">
-            201, A Block, Leo Homes, Shri Vaibhav Vibha , 2A main road, <br />
-            Kaverappa Layout, Kadubeesanhalli, <br />
-            Marathalli, Bangalore. <br />
-            Pincode - 560103
+            Janeshwar Enclave, Sector J, Kurshi Road, Gudamba, Gauranagh, beside ST Mary’s Polyclinic Hospital
+            <br />
+            Jankipuram, Lucknow<br />
+            Pincode- 226021
           </p>
         </div>
 
